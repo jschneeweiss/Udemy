@@ -53,7 +53,7 @@ const ToDoList = () => {
     }, [toDos]);
 
     return (
-        <div className="shadow-sm hover:shadow-lg">
+        <div className="shadow-sm hover:shadow-lg border">
             <div className="text-center bg-gray-900 text-white py-4 font-semibold">
                 <h1 className='text-3xl'>Unsere ToDo's</h1>
                 <h2>Offene ToDo's: {openCount}</h2>
@@ -63,7 +63,7 @@ const ToDoList = () => {
                         type="text"
                         value={textInput}
                         placeholder='Neues ToDo...'
-                        className='col-span-2 py-2 text-gray-900'
+                        className='col-span-2 py-2 text-gray-900 text-center'
                     ></input>
                     <input
                     onClick={submit}
