@@ -2,12 +2,6 @@ import React from 'react'
 
 const ToDo = ({ description, done, onChangeToDo, onDeleteToDo, index }) => {
 
-
-
-    const changeToDo = () => {
-        console.log("hallo");
-    }
-
     return (
         <div>
             <div className={
@@ -21,7 +15,7 @@ const ToDo = ({ description, done, onChangeToDo, onDeleteToDo, index }) => {
                     }}>
                     {description}
                 </h1>
-                <button className='text-lg bg-gray-400 p-2 text-white' onClick={() => {onDeleteToDo(index)}}>Löschen</button>
+                <button className='text-lg bg-gray-400 p-2 text-white  hover:text-black' onClick={() => {onDeleteToDo(index)}}>Löschen</button>
             </div>
         </div>
     )
