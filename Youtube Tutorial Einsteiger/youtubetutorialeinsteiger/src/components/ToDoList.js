@@ -13,13 +13,13 @@ const ToDoList = () => {
     const [textInput, setTextInput] = useState("");
 
     const changeText = (e) => {
-        setTextInput(e.target.value);        
+        setTextInput(e.target.value);
     };
 
     const submit = (e) => {
         e.preventDefault();
 
-        const newToDos = [...toDos, {description : textInput, done : false}];
+        const newToDos = [...toDos, { description: textInput, done: false }];
         setToDos(newToDos);
         setTextInput("");
     };
@@ -66,7 +66,7 @@ const ToDoList = () => {
                         className='col-span-2 py-2 text-gray-900 text-center'
                     ></input>
                     <input
-                    onClick={submit}
+                        onClick={submit}
                         type="submit"
                         value="Add ToDo"
                         className='col-span-1 text-gray-900 bg-gray-100 cursor-pointer'
