@@ -4,22 +4,25 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      name: 'Jennifer'
+    }
+  }
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            <p>Hallo, mein Name ist Jennifer</p>
+            <p>Hi {this.state.name}</p>
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <button>
+            Change Name
+          </button>
         </header>
       </div>
     );
