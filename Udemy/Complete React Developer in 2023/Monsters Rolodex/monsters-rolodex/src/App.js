@@ -8,7 +8,7 @@ class App extends Component {
     super();
 
     this.state = {
-      name: {firstname: 'Jennifer', lastname: 'Schneeweiss'},
+      name: { firstname: 'Jennifer', lastname: 'Schneeweiss' },
       company: 'MTU'
     }
   }
@@ -23,7 +23,12 @@ class App extends Component {
           </p>
           <button
             onClick={() => {
-              this.setState({ name: {firstname: 'Michelle', lastname:'Richter'} });
+              this.setState(
+                () => {
+                  return {
+                    name: { firstname: 'Michelle', lastname: 'Richter' }
+                  };
+                });
             }}>
             Change Name
           </button>
