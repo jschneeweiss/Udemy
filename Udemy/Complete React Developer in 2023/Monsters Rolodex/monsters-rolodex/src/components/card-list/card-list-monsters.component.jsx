@@ -5,8 +5,7 @@ import './card-list.style.css';
 class CardListMonsters extends Component {
 
     render() {
-        const { showMonsters } = this.props;
-        console.log('props', this.props);        
+        const { showMonsters } = this.props;     
 
         return (
             <div className='card-list'>
