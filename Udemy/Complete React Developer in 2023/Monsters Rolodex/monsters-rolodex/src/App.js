@@ -7,19 +7,26 @@ import './App.css';
 const App = () => {
   const [searchField, setSearchField] = useState(''); // [value, setValue]
   const [monsters, setMonsters] = useState([]);
+  const [filteredMonsters, setFilterMonsters] = useState(monsters);  
 
-  fetch('https://jsonplaceholder.typicode.com/users')
-    .then((res) => res.json())
-    .then((users) => setMonsters(users));
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then((res) => res.json())
+      .then((users) => setMonsters(users));
+  }, []); //dependency array bleibt leer, weil es nur einmal ausgeführt werden soll
+
+  useEffect(() => {
+    const newFilteredMonsters = monsters.filter((monster) => {
+      return monster.name.toLocaleLowerCase().includes(searchField);
+    });
+
+    setFilterMonsters(newFilteredMonsters);    
+  }, [monsters, searchField]); // dieser useEffect wird nur ausgelöst, wenn sich monsters oder searchFiled ändert
 
   const onSearchChange = (event) => {
     const searchFieldString = event.target.value.toLocaleLowerCase();
     setSearchField(searchFieldString);
-  }
-
-  const filteredMonsters = monsters.filter((monster) => {
-    return monster.name.toLocaleLowerCase().includes(searchField);
-  });
+  };
 
   return (
     <div className="App">
@@ -29,7 +36,7 @@ const App = () => {
         onChangeHandler={onSearchChange}
         placeholder='Search monsters'
         className='monsters-search-box'
-      />
+      />      
       <CardList monsters={filteredMonsters} />
     </div>
   )
