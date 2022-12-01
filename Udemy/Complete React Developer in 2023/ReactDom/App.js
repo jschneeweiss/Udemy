@@ -7,14 +7,13 @@ const Person = props => {
 
 const App = () => {
     return React.createElement('div', {}, [
-        React.createElement('h1', { class: 'title' }, "React IS rendered"),
+        React.createElement('h1', { className: 'title' }, "React IS rendered"),
         React.createElement(Person, { name: 'Jennifer', occupation: 'instructor' }, null),
         React.createElement(Person, { name: 'Michelle', occupation: 'Lead instructor' }, null),
         React.createElement(Person, { name: 'Heike', occupation: 'teacher' }, null),
     ]);
 };
 
-ReactDOM.render(
-    React.createElement(App),
-    document.getElementById('root')
-);
+const container = document.getElementById('root');
+const root = ReactDOM.createRoot(container);
+root.render(React.createElement(App),);
