@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background-color: #000000;
     margin: 0;    
     display: flex;
     align-items: center;
@@ -7,24 +7,102 @@ body {
     height: 100vh;
 }
 
-
 h1 {
-    color: hsl(0, 0%, 100%);
+    color: #ffffff;
 }
 
 .main-container {
     flex-direction: column;    
     text-align: left;
-    background-color: hsl(213, 19%, 18%);
-    border-radius: 15px;
-    padding: 50px;    
-    width: 500px;    
-    height: 250px;    
+    background-color: #252d37;
+    border-radius: 25px;
+    padding: 30px;    
+    width: 300px;    
+    height: 300px;    
 }
 
 .main-text {
-    color: hsl(217, 12%, 63%);
+    color: #949dab;
 }
+
+.star {
+    width: 15px;
+    height: 15px;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 0;
+} 
+
+.circle {
+    display: inline-block;
+    border-radius: 50%;
+    padding: 10px;    
+    background-color: #414545;
+    width: 20px;
+    height: 20px;  
+    text-align: center;
+    cursor: pointer;
+}
+
+.circle:hover {
+    background-color: #989595;
+    color: #ffffff;
+}
+
+.cirlce-font-color {
+    color: #959eac;
+}
+
+.button {
+    color: #ffffff;
+    background-color: #fb7413;
+    border-radius: 50px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #f0ffff;
+    color: #fb7413;
+}
+
+
+.voted-container {
+    display: none;
+    flex-direction: column;    
+    text-align: center;
+    background-color: #252d37;
+    border-radius: 25px;
+    padding: 30px;    
+    width: 300px;    
+    height: 300px; 
+}
+
+.voted-text {
+    color: #949dab;
+}
+
+.thank-you {
+    color: #ffffff;
+}
+
+.selectedRating {
+    background-color: #2d3641;
+    border-radius: 50px;
+    margin-top: 20px;
+    padding: 5px 10px;
+    display: inline-block;
+    color: #fb7413;
+}
+
+
+
 
 .attribution {
     font-size: 11px;
@@ -34,23 +112,5 @@ h1 {
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
-}
-
-
-
-.star {
-    width: 25px;
-    height: 25px;
-}
-
-#voted {
-    display: none;
-}
-
-.button {
-    color: hsl(0, 0%, 100%);
-    background-color: hsl(25, 97%, 53%);
-    border-radius: 12px;
-    padding: 10px;
+    color: #3e52a3;
 }

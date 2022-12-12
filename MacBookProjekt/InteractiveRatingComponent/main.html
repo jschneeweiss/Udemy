@@ -8,45 +8,55 @@
 
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <script type="text/javascript" src="functions.js"></script>
 
     <title>Frontend Mentor | Interactive rating component</title>
 </head>
 
-<body>    
-        <!-- Rating state start -->
-        <div class="main-container">
-            <img class="star" src="./img/icon-star.svg" />
-            <h1>How did we do?</h1>
-
-            <p class="main-text">
-                Please let us know how we did with your support request. All feedback is appreciated
-                to help us improve our offering!
-            </p>
-            <div>
-                1 2 3 4 5
-            </div>
-
-            <button class="button">Submit</button>
-
-            <!-- Rating state end -->
-
-            <!-- Thank you state start -->
-            <div id="voted">
-                You selected <!-- Add rating here --> out of 5
-
-                Thank you!
-
-                We appreciate you taking the time to give a rating. If you ever need more support,
-                don’t hesitate to get in touch!
-            </div>
+<body>
+    <!-- Rating state start -->
+    <div class="main-container" id="main">
+        <div class="circle" onClick=toggleStar()>
+            <img class="star" src="./img/icon-star.svg" alt="Star" />
         </div>
-        <!-- Thank you state end -->
+        <h1>How did we do?</h1>
+
+        <p class="main-text">
+            Please let us know how we did with your support request. All feedback is appreciated
+            to help us improve our offering!
+        </p>
+        <div class="rating">
+            <div class="circle cirlce-font-color" id="1" onClick=setRating(1)>1</div>
+            <div class="circle cirlce-font-color" id="2" onClick=setRating(2)>2</div>
+            <div class="circle cirlce-font-color" id="3" onClick=setRating(3)>3</div>
+            <div class="circle cirlce-font-color" id="4" onClick=setRating(4)>4</div>
+            <div class="circle cirlce-font-color" id="5" onClick=setRating(5)>5</div>
+        </div>
+
+        <button onClick=submit() class="button">SUBMIT</button>
+
+        <!-- Rating state end -->
+    </div>
+
+    <!-- Thank you state start -->
+    <div class="voted-container" id="voted">
+        <img class="thank-you" src="./img/illustration-thank-you.svg" alt="Thank you" />
+        <div class="selectedRating">
+            You selected <span id="selectedRating"></span> out of 5
+        </div>
+        <h2 class="thank-you">Thank you!</h2>
+        <p class="voted-text">
+            We appreciate you taking the time to give a rating. If you ever need more support,
+            don’t hesitate to get in touch!
+        </p>
+    </div>
+    <!-- Thank you state end -->
 
 
-        <div class="attribution">
-            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-            Coded by <a href="#">Jennifer Schneeweiss</a>.
-        </div>    
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Jennifer Schneeweiss</a>.
+    </div>
     <script>
 
     </script>
