@@ -34,6 +34,14 @@ h1 {
     height: 15px;
 }
 
+.star-color-unclicked {
+    filter: invert(69%) sepia(24%) saturate(178%) hue-rotate(177deg) brightness(88%) contrast(82%);
+}
+
+.star-color-clicked {
+    filter: invert(62%) sepia(29%) saturate(7103%) hue-rotate(351deg) brightness(100%) contrast(99%);
+}
+
 .rating {
     display: flex;
     flex-direction: row;
@@ -107,15 +115,6 @@ h1 {
     display: inline-block;
     color: hsl(25, 97%, 53%);
 }
-
-.star-color-unclicked {
-    filter: invert(69%) sepia(24%) saturate(178%) hue-rotate(177deg) brightness(88%) contrast(82%);
-}
-
-.star-color-clicked {
-    filter: invert(62%) sepia(29%) saturate(7103%) hue-rotate(351deg) brightness(100%) contrast(99%);
-}
-
 
 .attribution {
     font-size: 11px;
