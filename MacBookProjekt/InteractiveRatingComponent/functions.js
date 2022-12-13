@@ -1,30 +1,27 @@
-let selectedRating;
+let selectedRating = 0;
 
-function setRating(id) {
-    setDefaultRatingColor(id);    
+function setRating(id) {  
     toggleButtonColor(id);        
 }
 
 function toggleButtonColor(id) {
     let ratingButton = document.getElementById(id);
 
-    if (ratingButton.style.color === "rgb(255, 255, 255)") {        
-        document.getElementById(id).style.backgroundColor = "#414545";
-        document.getElementById(id).style.color = "#959eac";
-        selectedRating = 0;
-    } else {        
-        document.getElementById(id).style.backgroundColor = "#fb7413";
-        document.getElementById(id).style.color = "#ffffff";
-        selectedRating = id;
-    }    
-}
+    document.getElementById(id).classList.add("circle-clicked");
+    document.getElementById(id).classList.remove("circle-hover");
 
-function setDefaultRatingColor(id) {
-    for (let ratingButton = 1; ratingButton <= 5; ratingButton++) {
-        if (id !== ratingButton) {
-            document.getElementById(ratingButton).style.backgroundColor = "#414545";
-            document.getElementById(ratingButton).style.color = "#959eac";
-        }        
+    // check if rating is selected and remove the old selected
+    if (selectedRating) {
+        document.getElementById(selectedRating).classList.remove("circle-clicked");
+        document.getElementById(selectedRating).classList.add("circle-hover");
+    }
+    // check if the same rating is clicked and remove circle-clicked class
+    if (selectedRating === id) {
+        document.getElementById(selectedRating).classList.remove("circle-clicked");
+        document.getElementById(selectedRating).classList.add("circle-hover");
+        selectedRating = 0;
+    } else {
+        selectedRating = id;
     }
 }
 

@@ -48,19 +48,21 @@ h1 {
     border-radius: 50%;
     padding: 10px;    
     background-color: #414545;
+    color: #959eac;
     width: 25px;
     height: 25px;  
     text-align: center;
-    cursor: pointer;
+    cursor: pointer;    
 }
 
-.circle:hover {
+.circle-hover:hover {
     background-color: #7c8798;
-    color: #ffffff;
+    color: #ffffff; 
 }
 
-.cirlce-font-color {
-    color: #959eac;
+.circle-clicked {
+    background-color: #fb7413;
+    color: #ffffff;
 }
 
 .button {
@@ -77,7 +79,6 @@ h1 {
     background-color: #f0ffff;
     color: #fb7413;
 }
-
 
 .voted-container {
     display: none;
