@@ -1,12 +1,11 @@
 let selectedRating = 0;
+let toggle = 0;
 
 function setRating(id) {  
     toggleButtonColor(id);        
 }
 
-function toggleButtonColor(id) {
-    let ratingButton = document.getElementById(id);
-
+function toggleButtonColor(id) {  
     document.getElementById(id).classList.add("circle-clicked");
     document.getElementById(id).classList.remove("circle-hover");
 
@@ -26,10 +25,15 @@ function toggleButtonColor(id) {
 }
 
 function toggleStar() {
-    let starElement = document.getElementById("star");
-
-    console.log(starElement);
-    // starElement.setAttribute("fill", "blue");
+    if (toggle) {
+        document.getElementById("star").classList.add("star-color-clicked");
+        document.getElementById("star").classList.remove("star-color-unclicked");
+        toggle = 0;
+    } else {
+        document.getElementById("star").classList.remove("star-color-clicked");
+        document.getElementById("star").classList.add("star-color-unclicked");
+        toggle = 1;
+    }    
 }
 
 function submit() {
