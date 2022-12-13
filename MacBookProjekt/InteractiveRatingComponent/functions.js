@@ -26,12 +26,12 @@ function toggleButtonColor(id) {
 
 function toggleStar() {
     if (toggle) {
-        document.getElementById("star").classList.add("star-color-clicked");
-        document.getElementById("star").classList.remove("star-color-unclicked");
-        toggle = 0;
-    } else {
         document.getElementById("star").classList.remove("star-color-clicked");
         document.getElementById("star").classList.add("star-color-unclicked");
+        toggle = 0;
+    } else {
+        document.getElementById("star").classList.add("star-color-clicked");
+        document.getElementById("star").classList.remove("star-color-unclicked");
         toggle = 1;
     }    
 }
