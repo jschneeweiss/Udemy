@@ -1,26 +1,22 @@
 let selectedRating;
 
 function setRating(id) {
-    setDefaultRatingColor(id);
-    console.log('id', id);
+    setDefaultRatingColor(id);    
     toggleButtonColor(id);        
 }
 
 function toggleButtonColor(id) {
     let ratingButton = document.getElementById(id);
-    console.log(ratingButton.style);
-    if (ratingButton.style.color === "rgb(255, 255, 255)") {
-        console.log(true);
+
+    if (ratingButton.style.color === "rgb(255, 255, 255)") {        
         document.getElementById(id).style.backgroundColor = "#414545";
         document.getElementById(id).style.color = "#959eac";
         selectedRating = 0;
-    } else {
-        console.log(false);
+    } else {        
         document.getElementById(id).style.backgroundColor = "#fb7413";
         document.getElementById(id).style.color = "#ffffff";
         selectedRating = id;
-    }
-    console.log('selectedRating', selectedRating); 
+    }    
 }
 
 function setDefaultRatingColor(id) {
