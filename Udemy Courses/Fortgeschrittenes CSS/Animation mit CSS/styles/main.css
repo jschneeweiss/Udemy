@@ -1,0 +1,10 @@
+/* Start Code damit es im jedem Browser gleich aussieht */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.logo {
+    max-width: 200px;
+}
