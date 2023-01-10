@@ -43,4 +43,6 @@ html {
     padding: 10px 20px;
     display: inline-block;
     border-radius: 50px;
+    width: 10%;
+    transition: width 2s;
 }
