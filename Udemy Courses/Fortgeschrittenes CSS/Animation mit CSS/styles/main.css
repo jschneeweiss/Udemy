@@ -46,22 +46,40 @@ html {
     width: 10%;
     transition: width 2s;
 
-    animation-name: button-animation;
-    animation-duration: 10s;
-    animation-timing-function: linear;
-    animation-iteration-count: 5;
-    animation-delay: 2s;
-    animation-fill-mode: both;
+    /* animation-name: button-animation, button-animation-position;
+    animation-duration: 10s, 5s;
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: 5, 10;
+    animation-delay: 2s, 0s;
+    animation-fill-mode: both; */
+
+    animation: button-animation 10s linear 5 2s both,
+               button-animation-position 5s ease-in-out 10 0s both;
+}
+
+@keyframes button-animation-position {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(50px, 10px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
 }
 
 @keyframes button-animation {
     0% {
+        width: 250px;
         background-color: red;
     }
     50% {
+        width: 500px;
         background-color: green;
     }
     100% {
+        width: 250px;
         background-color: yellow;
     }
 }
