@@ -46,14 +46,7 @@ html {
     width: 10%;
     transition: width 2s;
 
-    /* animation-name: button-animation, button-animation-position;
-    animation-duration: 10s, 5s;
-    animation-timing-function: linear, ease-in-out;
-    animation-iteration-count: 5, 10;
-    animation-delay: 2s, 0s;
-    animation-fill-mode: both; */
-
-    animation: button-animation 10s linear 5 2s both,
+    animation: button-animation-color 10s linear 5 2s both,
                button-animation-position 5s ease-in-out 10 0s both;
 }
 
@@ -69,7 +62,7 @@ html {
     }
 }
 
-@keyframes button-animation {
+@keyframes button-animation-color {
     0% {
         width: 250px;
         background-color: red;
