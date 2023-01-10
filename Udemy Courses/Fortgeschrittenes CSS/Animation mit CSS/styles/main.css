@@ -17,12 +17,42 @@ html {
 
 .header {
     text-align: center;
+   
 }
 
 .logo {
     max-width: 200px;
     margin-top: 50px;
     margin-bottom: 35px;
+
+    animation: logo-fly-in 4s linear 0s 1 both,
+    logo-turbulences 15s ease-in-out 4.5s infinite none;    
+}
+
+@keyframes logo-turbulences {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {        
+        transform: translate(0, -7px) rotate(3deg);
+    }
+    50% {
+        transform: translate(0, 7px);
+    }
+    75% {
+        transform: translate(0, 5px) scale(1.025) rotate(-3deg);
+    }
+}
+
+@keyframes logo-fly-in {
+    0% {
+        opacity: 0;
+        transform: translate(-60vw, 0px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
 }
 
 .main {
@@ -45,34 +75,4 @@ html {
     border-radius: 50px;
     width: 10%;
     transition: width 2s;
-
-    animation: button-animation-color 10s linear 5 2s both,
-               button-animation-position 5s ease-in-out 10 0s both;
-}
-
-@keyframes button-animation-position {
-    0% {
-        transform: translate(0px, 0px);
-    }
-    50% {
-        transform: translate(50px, 10px);
-    }
-    100% {
-        transform: translate(0px, 0px);
-    }
-}
-
-@keyframes button-animation-color {
-    0% {
-        width: 250px;
-        background-color: red;
-    }
-    50% {
-        width: 500px;
-        background-color: green;
-    }
-    100% {
-        width: 250px;
-        background-color: yellow;
-    }
 }
