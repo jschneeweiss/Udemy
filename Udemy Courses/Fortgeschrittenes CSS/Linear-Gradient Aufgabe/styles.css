@@ -1,0 +1,54 @@
+* { padding: 0; margin: 0; box-sizing: border-box; }
+
+html {
+    background-image: linear-gradient(45deg, rgb(0, 255, 195), rgb(243, 232, 13), rgb(246, 49, 4));
+}
+
+.container {
+    margin: auto;
+    width: 70%;
+    height: 1000px;
+    background-color: white;
+    padding: 20px 20px;
+}
+
+.button {
+    margin-bottom: 20px;
+    height: 30px;
+    width: 90px;
+    background-image: linear-gradient(to bottom, rgb(124, 123, 123), white);
+}
+
+.button:hover {
+    background-image: linear-gradient(to top, rgb(124, 123, 123), white);
+}
+
+.container-img {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/pexels-benjamin-suter-3733269.jpg");
+    background-size: 300px 500px;    
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    width: 300px;
+    height: 500px;
+    text-align: center;      
+}
+
+h1 {
+    color: white;
+    padding-top: 140px;
+    text-shadow: 0px 0px 10px black;
+}
+
+.german-flag {
+    background-image: linear-gradient(black 33%, red 33%, red 66%, gold 66%);
+    height: 100px;
+    width: 300px;
+}
+
+.red-cross {
+    background-color: white;
+    border: 2px solid black;
+    height: 100px;
+    width: 300px;
+
+}
