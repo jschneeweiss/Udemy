@@ -73,10 +73,22 @@ html {
     font-weight: bold;
     color: white;
     text-decoration: none;
-    background-color: rgb(135, 111, 96);
+    background-color: rgb(167, 135, 115);
     padding: 10px 20px;
     display: inline-block;
     border-radius: 50px;
-    width: 10%;
-    transition: width 2s;
+    width: 10%;    
+}
+
+.button:hover {
+    background-image: radial-gradient(circle at 50% 50%, rgb(135, 111, 96) 1%, rgb(94, 76, 66) 1%);
+    background-size: 20000% 20000%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    transition: background-size linear 0.25s;
+}
+
+.button:hover:active {
+    transition-duration: 0s;
+    background-size: 100% 100%;
 }
