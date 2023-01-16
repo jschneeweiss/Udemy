@@ -12,7 +12,7 @@
 }
 
 body {
-  font-size: 16px;
+  font-size: 1.6rem;
   font-family: "Lato", sans-serif;
 }
 
@@ -21,20 +21,23 @@ body {
 }
 
 .card {
-    margin: 20px;
-    padding: 110px 30px;
-    width: 75%;
-    height: 300px;
-    border-radius: 5px;
+    margin: 2rem;
+    padding: 11rem 3rem;
+    width: 40rem;
+    /* height: 30rem; */
+    height: 50vh;
+    border-radius: 0.5rem;
     background: linear-gradient(30deg, #3ff0a6, #49e023);
 
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    box-shadow: 0.2rem 0.2rem 1rem rgba(0,0,0,0.5);
     color: black;
     text-align: center;
+
+    margin-left: 50vw;
 }
 
 .card h1 {
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 
 p {
