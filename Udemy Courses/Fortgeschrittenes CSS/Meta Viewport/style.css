@@ -30,12 +30,6 @@ body {
     text-align: center;
 }
 
-@media (min-width: 32em) {
-    .card {
-        background: linear-gradient(30deg, #f39214, #e03323);
-    }
-}
-
 .card h1 {
     margin-bottom: 1rem;
 }
@@ -44,4 +38,20 @@ body {
     width: 50%;
     padding: 2rem 2rem;
     float: left;
+}
+
+@media (max-width: 32em) {
+    .card {
+        background: linear-gradient(30deg, #f39214, #e03323);
+    }
+
+    .col {
+        float: inherit;
+    }
+}
+
+@media (max-width: 26em) {
+    .card {
+        width: 9em;
+    }
 }
