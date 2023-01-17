@@ -30,6 +30,12 @@ body {
     text-align: center;
 }
 
+@media (min-width: 32em) {
+    .card {
+        background: linear-gradient(30deg, #f39214, #e03323);
+    }
+}
+
 .card h1 {
     margin-bottom: 1rem;
 }
