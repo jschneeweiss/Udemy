@@ -8,6 +8,11 @@ html {
     font-size: 100%;
 }
 
+.container {
+    width: 75rem;
+    margin: 0px auto;
+}
+
 .header {
     height: 40rem;
 
@@ -16,4 +21,24 @@ html {
     background-repeat: no-repeat no-repeat;
     background-position: center 100%, center center;
     background-size: 100vw 10vw, cover;
+}
+
+.navigation__list-item {
+    list-style-type: none;
+    display: block;
+    float: left;
+}
+
+.navigation__list-item-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 0.25rem 0.25rem 0.25rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    display: block;
+}
+
+.navigation__list-item-link:hover {
+    border-bottom: 0.2rem solid rgb(0, 226, 156);
 }
