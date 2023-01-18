@@ -41,4 +41,10 @@ html {
 
 .navigation__list-item-link:hover {
     border-bottom: 0.2rem solid rgb(0, 226, 156);
+    opacity: 0.75;
+}
+
+.navigation__list-item-link-logo {
+    width: 4rem;
+    height: 4rem;
 }
