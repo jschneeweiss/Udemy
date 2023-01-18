@@ -40,11 +40,23 @@ html {
 }
 
 .navigation__list-item-link:hover {
-    border-bottom: 0.2rem solid rgb(0, 226, 156);
-    opacity: 0.75;
+    border-bottom: 0.2rem solid rgb(0, 226, 156);    
 }
 
-.navigation__list-item-link-logo {
+.navigation__list-item-link--logo:hover {
+    border-bottom: none;
+    color: gray;
+}
+
+.navigation__list-item-logo {
     width: 4rem;
     height: 4rem;
 }
+
+.navigation__list-item-logo {
+    fill: currentColor;
+}
+
+/* .navigation__list-item-link--logo:hover .navigation__list-item-logo {
+    fill: red;
+} */
