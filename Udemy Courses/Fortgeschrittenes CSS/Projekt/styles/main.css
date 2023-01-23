@@ -37,6 +37,11 @@ html {
     float: left;
 }
 
+.navigation__list-item--menu {
+    float: right;
+    font-size: 3rem;
+}
+
 .navigation__list-item-link {
     color: white;
     text-decoration: none;
@@ -49,6 +54,11 @@ html {
 
 .navigation__list-item-link:hover {
     border-bottom: 0.2rem solid rgb(0, 226, 156);    
+}
+
+.navigation__list-item--menu .navigation__list-item-link:hover {
+    border-bottom: none;
+    color: rgb(200, 200, 200);
 }
 
 .navigation__list-item-link--logo:hover {
