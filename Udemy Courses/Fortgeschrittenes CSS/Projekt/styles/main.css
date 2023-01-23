@@ -1,3 +1,5 @@
+/* 16px = 1rem */
+
 * {
     margin: 0;
     padding: 0;
@@ -83,4 +85,28 @@ html {
 
 .navigation__list-item-logo {
     fill: currentColor;
+}
+
+.header__heading-container {
+    clear: both;
+}
+
+.header__heading-main {
+    padding-top: 5rem;
+    line-height: 92%;
+    font-size: 7rem;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;     
+    text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.header__heading-sub {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.25rem;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
 }
