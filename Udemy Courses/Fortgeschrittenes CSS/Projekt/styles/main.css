@@ -19,6 +19,7 @@ html {
 .header {
     height: 40rem;
     position: relative;
+    overflow: hidden;
 
     background-image: linear-gradient(-5.71deg, white 49.9%, transparent 50.1%);        
     background-repeat: no-repeat;
@@ -30,11 +31,11 @@ html {
     position: relative;
 }
 
-.header__background {
-    height: 40rem;
+.header__background {    
     position: absolute;
-    width: 100vw;    
-    bottom: 0;
+    width: 100vw;
+    top: 0;
+    bottom: -9rem;
 
     background-image: url("../images/pexels-benjamin-suter-3617500.jpg");
     background-repeat: no-repeat;
@@ -44,7 +45,7 @@ html {
 
 .header__mountains {
     position: absolute;
-    bottom: 0;
+    bottom: -9rem;
 
     /* 2000 pixel breit <=> 100vw */
     /* ~660 pixel hoch <=> 33vw */
@@ -140,4 +141,6 @@ html {
     color: white;
     text-transform: uppercase;
     text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    position: relative;
 }
