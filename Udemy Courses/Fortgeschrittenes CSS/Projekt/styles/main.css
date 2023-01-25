@@ -20,6 +20,14 @@ html {
     height: 40rem;
     position: relative;
     overflow: hidden;
+}
+.header__slope {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 10vw;
+    z-index: 1;
 
     background-image: linear-gradient(-5.71deg, white 49.9%, transparent 50.1%);        
     background-repeat: no-repeat;
@@ -31,7 +39,8 @@ html {
     position: relative;
 }
 
-.header__background {    
+.header::before {    
+    content: "";
     position: absolute;
     width: 100vw;
     top: 0;
@@ -43,7 +52,8 @@ html {
     background-size: 100% auto;
 }
 
-.header__mountains {
+.header::after {
+    content: "";
     position: absolute;
     bottom: -9rem;
 
