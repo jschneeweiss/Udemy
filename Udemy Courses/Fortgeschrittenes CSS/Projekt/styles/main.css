@@ -11,16 +11,39 @@ html {
     font-family: 'Jost', sans-serif;
 }
 
-.container {    
-    width: 75rem;
+/** Breakpoints**/
+
+/** 1200px oder schmaler **/
+@media (max-width: 75em) {}
+
+/** 992px oder schmaler **/
+@media (max-width: 62em) {}
+
+/** 768px oder schmaler **/
+@media (max-width: 48em) {}
+
+/** 576px oder schmaler **/
+@media (max-width: 36em) {}
+
+.container {
+    max-width: 75rem;
     margin: 0px auto;
 }
 
 .header {
-    height: 40rem;
+    height: 35rem;
+    min-height: calc(13rem + 32vw);
     position: relative;
     overflow: hidden;
 }
+
+/** 1200px oder schmaler **/
+@media (max-width: 75em) {
+    .header {
+        height: calc(18rem + 32vw);
+    }
+}
+
 .header__slope {
     position: absolute;
     left: 0;
@@ -29,7 +52,7 @@ html {
     height: 10vw;
     z-index: 1;
 
-    background-image: linear-gradient(-5.71deg, white 49.9%, transparent 50.1%);        
+    background-image: linear-gradient(-5.71deg, white 49.9%, transparent 50.1%);
     background-repeat: no-repeat;
     background-position: center 100%;
     background-size: 100vw 10vw;
@@ -39,7 +62,7 @@ html {
     position: relative;
 }
 
-.header::before {    
+.header::before {
     content: "";
     position: absolute;
     width: 100vw;
@@ -60,12 +83,43 @@ html {
     /* 2000 pixel breit <=> 100vw */
     /* ~660 pixel hoch <=> 33vw */
     width: 100vw;
-    height: 33vw;    
+    height: 33vw;
 
     background-image: url("../images/pexels-benjamin-suter-3617500-mountains.webp");
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: 100% auto;
+}
+
+/** 1200px oder schmaler **/
+@media (max-width: 75em) {
+    .header::before {
+        bottom: -4rem;
+    }
+
+    .header::after {
+        bottom: -4rem;
+    }
+}
+
+@media (max-width: 62em) {
+    .header::before {
+        bottom: -1rem;
+    }
+
+    .header::after {
+        bottom: -1rem;
+    }
+}
+
+@media (max-width: 36em) {
+    .header::before {
+        background-size: cover;
+    }
+
+    .header::after {
+        display: none;
+    }
 }
 
 .icon {
@@ -80,6 +134,12 @@ html {
     list-style-type: none;
     display: block;
     float: left;
+}
+
+@media (max-width: 62em) {
+    .navigation__list-item--mobile-hidden {
+        display: none;
+    }
 }
 
 .navigation__list-item--menu {
@@ -99,7 +159,7 @@ html {
 }
 
 .navigation__list-item-link:hover {
-    border-bottom: 0.2rem solid rgb(0, 226, 156);    
+    border-bottom: 0.2rem solid rgb(0, 226, 156);
 }
 
 .navigation__list-item--menu .navigation__list-item-link {
@@ -117,7 +177,8 @@ html {
 }
 
 .navigation__list-item-link--logo {
-    margin-top: 0.9rem;;
+    margin-top: 0.9rem;
+    ;
 }
 
 .navigation__list-item-logo {
@@ -139,8 +200,20 @@ html {
     font-size: 7rem;
     text-align: center;
     color: white;
-    text-transform: uppercase;     
+    text-transform: uppercase;
     text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 62em) {
+    .header__heading-main {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 48em) {
+    .header__heading-main {
+        font-size: 3rem;
+    }
 }
 
 .header__heading-sub {
@@ -153,4 +226,10 @@ html {
     text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
     z-index: 1;
     position: relative;
+}
+
+@media (max-width: 48em) {
+    .header__heading-sub {
+        font-size: 1rem;
+    }
 }
