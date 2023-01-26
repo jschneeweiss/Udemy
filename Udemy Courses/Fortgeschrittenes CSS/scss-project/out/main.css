@@ -1,0 +1,10 @@
+.header__heading-main {
+  font-size: 6rem;
+}
+@media (max-width: 62em) {
+  .header__heading-main {
+    font-size: 10rem;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
