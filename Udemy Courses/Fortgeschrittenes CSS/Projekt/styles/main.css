@@ -1,5 +1,21 @@
 /* 16px = 1rem */
 
+@font-face {
+    font-family: "Jost";
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url("../fonts/jost/Jost-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Jost";
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url("../fonts/jost/Jost-Italic-VariableFont_wght.ttf") format("truetype");
+}
+
 * {
     margin: 0;
     padding: 0;
