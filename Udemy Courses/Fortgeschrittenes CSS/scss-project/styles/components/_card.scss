@@ -1,0 +1,32 @@
+.card {
+    padding: 9rem 3rem;
+    height: 20rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.5);
+    color: black;
+    text-align: center;
+
+    background: linear-gradient(30deg, #3ff0a6, #49e023);
+
+    &--blue { // in css -> .card--blue. & bedeutet, es wird angehängt
+        background: linear-gradient(30deg, #423ff0, #c227ad);        
+    }
+
+    @media (max-width: 74em) {
+        background: linear-gradient(30deg, #423ff0, #c227ad);
+    }
+
+    h1,
+    h2,
+    h3 {
+        // color: white;
+
+        &:hover {   // & -> gilt für alle Überschriften, Kurzschreibweise anstatt es wie im css nochmal extra zu schreiben
+            color: greenyellow;
+
+            @media (max-width: 74em) {
+                color: paleturquoise;
+            }
+        }
+    }
+}
