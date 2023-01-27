@@ -8,12 +8,18 @@
 
     background: linear-gradient(30deg, #3ff0a6, #49e023);
 
-    &--blue { // in css -> .card--blue. & bedeutet, es wird angehängt
-        background: linear-gradient(30deg, #423ff0, #c227ad);        
+    &--blue {
+        // in css -> .card--blue. & bedeutet, es wird angehängt
+        background-image: url("../images/logo.svg"), 
+        linear-gradient(30deg, #3ff0a6, #49e023);
+        background-repeat: no-repeat;
+        background-position: 1rem 1rem, center center;
+        background-size: 4rem 4rem, 100% 100%;
     }
 
     @media (max-width: 74em) {
-        background: linear-gradient(30deg, #423ff0, #c227ad);
+        background-image: url("../images/logo.svg"), 
+        linear-gradient(30deg, #423ff0, #c227ad);
     }
 
     h1,
@@ -21,7 +27,8 @@
     h3 {
         // color: white;
 
-        &:hover {   // & -> gilt für alle Überschriften, Kurzschreibweise anstatt es wie im css nochmal extra zu schreiben
+        &:hover {
+            // & -> gilt für alle Überschriften, Kurzschreibweise anstatt es wie im css nochmal extra zu schreiben
             color: greenyellow;
 
             @media (max-width: 74em) {

@@ -43,11 +43,14 @@ html {
   background: linear-gradient(30deg, #3ff0a6, #49e023);
 }
 .card--blue {
-  background: linear-gradient(30deg, #423ff0, #c227ad);
+  background-image: url("../images/logo.svg"), linear-gradient(30deg, #3ff0a6, #49e023);
+  background-repeat: no-repeat;
+  background-position: 1rem 1rem, center center;
+  background-size: 4rem 4rem, 100% 100%;
 }
 @media (max-width: 74em) {
   .card {
-    background: linear-gradient(30deg, #423ff0, #c227ad);
+    background-image: url("../images/logo.svg"), linear-gradient(30deg, #423ff0, #c227ad);
   }
 }
 .card h1:hover,
