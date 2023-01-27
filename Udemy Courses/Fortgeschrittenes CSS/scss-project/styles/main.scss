@@ -25,6 +25,10 @@ html {
 
     background: linear-gradient(30deg, #3ff0a6, #49e023);
 
+    &--blue { // in css -> .card--blue. & bedeutet, es wird angehängt
+        background: linear-gradient(30deg, #423ff0, #c227ad);        
+    }
+
     @media (max-width: 74em) {
         background: linear-gradient(30deg, #423ff0, #c227ad);
     }
@@ -32,7 +36,7 @@ html {
     h1,
     h2,
     h3 {
-        color: white;
+        // color: white;
 
         &:hover {   // & -> gilt für alle Überschriften, Kurzschreibweise anstatt es wie im css nochmal extra zu schreiben
             color: greenyellow;
@@ -44,8 +48,13 @@ html {
     }
 }
 
+.card__heading {
+    color: black;
 
-
+    .card--blue & {
+        color: white;
+    }
+}
 
 .col {
     width: 100%;

@@ -23,15 +23,13 @@ html {
   text-align: center;
   background: linear-gradient(30deg, #3ff0a6, #49e023);
 }
+.card--blue {
+  background: linear-gradient(30deg, #423ff0, #c227ad);
+}
 @media (max-width: 74em) {
   .card {
     background: linear-gradient(30deg, #423ff0, #c227ad);
   }
-}
-.card h1,
-.card h2,
-.card h3 {
-  color: white;
 }
 .card h1:hover,
 .card h2:hover,
@@ -40,10 +38,17 @@ html {
 }
 @media (max-width: 74em) {
   .card h1:hover,
-.card h2:hover,
-.card h3:hover {
+  .card h2:hover,
+  .card h3:hover {
     color: paleturquoise;
   }
+}
+
+.card__heading {
+  color: black;
+}
+.card--blue .card__heading {
+  color: white;
 }
 
 .col {
