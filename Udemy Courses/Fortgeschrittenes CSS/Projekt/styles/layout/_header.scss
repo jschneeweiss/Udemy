@@ -3,14 +3,16 @@
     min-height: calc(13rem + 32vw);
     position: relative;
     overflow: hidden;
-}
 
-/** 1200px oder schmaler **/
-@media (max-width: 75em) {
-    .header {
-        height: calc(18rem + 32vw);
+    /** 1200px oder schmaler **/
+    @media (max-width: 75em) {
+        .header {
+            height: calc(18rem + 32vw);
+        }
     }
 }
+
+
 
 .header__slope {
     position: absolute;
@@ -30,62 +32,45 @@
     position: relative;
 }
 
-.header::before {
-    content: "";
-    position: absolute;
-    width: 100vw;
-    top: 0;
-    bottom: -9rem;
-
-    background-image: url("../images/pexels-benjamin-suter-3617500.jpg");
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size: 100% auto;
-}
-
+.header::before,
 .header::after {
     content: "";
     position: absolute;
+    /* 2000 pixel breit <=> 100vw */
+    width: 100vw;
     bottom: -9rem;
 
-    /* 2000 pixel breit <=> 100vw */
-    /* ~660 pixel hoch <=> 33vw */
-    width: 100vw;
-    height: 33vw;
-
-    background-image: url("../images/pexels-benjamin-suter-3617500-mountains.webp");
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: 100% auto;
-}
 
-/** 1200px oder schmaler **/
-@media (max-width: 75em) {
-    .header::before {
+    /** 1200px oder schmaler **/
+    @media (max-width: 75em) {
         bottom: -4rem;
     }
 
-    .header::after {
-        bottom: -4rem;
-    }
-}
-
-@media (max-width: 62em) {
-    .header::before {
-        bottom: -1rem;
-    }
-
-    .header::after {
+    @media (max-width: 62em) {
         bottom: -1rem;
     }
 }
 
-@media (max-width: 36em) {
-    .header::before {
+.header::before {
+    top: 0;
+
+    background-image: url("../images/pexels-benjamin-suter-3617500.jpg");
+
+    @media (max-width: 36em) {
         background-size: cover;
     }
+}
 
-    .header::after {
+.header::after {
+    /* ~660 pixel hoch <=> 33vw */
+    height: 33vw;
+
+    background-image: url("../images/pexels-benjamin-suter-3617500-mountains.webp");
+
+    @media (max-width: 36em) {
         display: none;
     }
 }
@@ -109,28 +94,25 @@
     animation-duration: 2s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: both;
+
+    @media (max-width: 62em) {
+        font-size: 5rem;
+    }
+
+    @media (max-width: 48em) {
+        font-size: 3rem;
+    }
 }
 
-@keyframes  header__heading-main-font-weight {
+@keyframes header__heading-main-font-weight {
     0% {
         opacity: 0;
         font-weight: 100;
     }
+
     100% {
         opacity: 1;
         font-weight: 700;
-    }
-}
-
-@media (max-width: 62em) {
-    .header__heading-main {
-        font-size: 5rem;
-    }
-}
-
-@media (max-width: 48em) {
-    .header__heading-main {
-        font-size: 3rem;
     }
 }
 
@@ -144,10 +126,8 @@
     text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
     z-index: 1;
     position: relative;
-}
 
-@media (max-width: 48em) {
-    .header__heading-sub {
+    @media (max-width: 48em) {
         font-size: 1rem;
     }
 }

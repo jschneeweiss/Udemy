@@ -34,14 +34,14 @@ html {
   min-height: calc(13rem + 32vw);
   position: relative;
   overflow: hidden;
+  /** 1200px oder schmaler **/
 }
-
-/** 1200px oder schmaler **/
 @media (max-width: 75em) {
-  .header {
+  .header .header {
     height: calc(18rem + 32vw);
   }
 }
+
 .header__slope {
   position: absolute;
   left: 0;
@@ -59,57 +59,52 @@ html {
   position: relative;
 }
 
-.header::before {
-  content: "";
-  position: absolute;
-  width: 100vw;
-  top: 0;
-  bottom: -9rem;
-  background-image: url("../images/pexels-benjamin-suter-3617500.jpg");
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: 100% auto;
-}
-
+.header::before,
 .header::after {
   content: "";
   position: absolute;
-  bottom: -9rem;
   /* 2000 pixel breit <=> 100vw */
-  /* ~660 pixel hoch <=> 33vw */
   width: 100vw;
-  height: 33vw;
-  background-image: url("../images/pexels-benjamin-suter-3617500-mountains.webp");
+  bottom: -9rem;
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: 100% auto;
+  /** 1200px oder schmaler **/
 }
-
-/** 1200px oder schmaler **/
 @media (max-width: 75em) {
-  .header::before {
-    bottom: -4rem;
-  }
+  .header::before,
   .header::after {
     bottom: -4rem;
   }
 }
 @media (max-width: 62em) {
-  .header::before {
-    bottom: -1rem;
-  }
+  .header::before,
   .header::after {
     bottom: -1rem;
   }
+}
+
+.header::before {
+  top: 0;
+  background-image: url("../images/pexels-benjamin-suter-3617500.jpg");
 }
 @media (max-width: 36em) {
   .header::before {
     background-size: cover;
   }
+}
+
+.header::after {
+  /* ~660 pixel hoch <=> 33vw */
+  height: 33vw;
+  background-image: url("../images/pexels-benjamin-suter-3617500-mountains.webp");
+}
+@media (max-width: 36em) {
   .header::after {
     display: none;
   }
 }
+
 .header__heading-container {
   clear: both;
 }
@@ -129,6 +124,16 @@ html {
   animation-timing-function: ease-in-out;
   animation-fill-mode: both;
 }
+@media (max-width: 62em) {
+  .header__heading-main {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 48em) {
+  .header__heading-main {
+    font-size: 3rem;
+  }
+}
 
 @keyframes header__heading-main-font-weight {
   0% {
@@ -138,16 +143,6 @@ html {
   100% {
     opacity: 1;
     font-weight: 700;
-  }
-}
-@media (max-width: 62em) {
-  .header__heading-main {
-    font-size: 5rem;
-  }
-}
-@media (max-width: 48em) {
-  .header__heading-main {
-    font-size: 3rem;
   }
 }
 .header__heading-sub {
@@ -161,12 +156,12 @@ html {
   z-index: 1;
   position: relative;
 }
-
 @media (max-width: 48em) {
   .header__heading-sub {
     font-size: 1rem;
   }
 }
+
 .navigation__list-item {
   list-style-type: none;
   display: block;
