@@ -8,10 +8,6 @@ html {
   font-family: "Lato", sans-serif;
 }
 
-body {
-  background-color: hsl(190deg, 100%, 50%);
-}
-
 .row::after {
   display: table;
   content: " ";
@@ -75,6 +71,25 @@ body {
   .card h3:hover {
     color: paleturquoise;
   }
+}
+
+.button-blue, .button-green {
+  display: inline-block;
+  margin: 1rem;
+  padding: 1rem 3rem;
+  border: 0.05rem solid rgb(150, 150, 150);
+  border-radius: 1rem;
+  text-decoration: none;
+}
+
+.button-green {
+  background-color: green;
+  color: white;
+}
+
+.button-blue {
+  background-color: blue;
+  color: white;
 }
 
 /*# sourceMappingURL=main.css.map */

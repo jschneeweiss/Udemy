@@ -57,3 +57,29 @@ $card-text-color: black;
         }
     }
 }
+
+%button { // % sorgt dafür, das bei @extend die Kommaschreibweise nicht genutzt wird sonder die Klassen mit .button-green den Inhalt von %button hat
+    display: inline-block;
+    margin: 1rem;
+    padding: 1rem 3rem;
+    border: 0.05rem solid rgb(150, 150, 150);
+    border-radius: 1rem;
+    text-decoration: none;
+}
+
+// @mixin css Code wird kopiert
+// @extend css Code wird für die Klasse eingesetzt
+// kann genutzt werden, wenn die BEM schreibweise nicht genutzt wird
+
+.button-green {
+    @extend %button;
+
+    background-color: green;
+    color: white;
+}
+
+.button-blue {
+    @extend %button;
+    background-color: blue;
+    color: white;
+}
