@@ -3,4 +3,4 @@
 $-color-green-base: green!default; // $- = private Variable, kann nur hier genutzt werden
 
 $button-green-color: color.scale($-color-green-base, $lightness: 50%)!default;
-$button-blue-color: rgb(67, 67, 214)!default;
+$button-blue-color: rgb(67, 67, 214)!default; // !default = standartwert

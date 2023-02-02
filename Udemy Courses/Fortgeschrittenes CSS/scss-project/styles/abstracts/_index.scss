@@ -1,1 +1,5 @@
+// @use "button";
 @forward "button";
+// @forward "button" with (
+//     $-color-green-base: pink // alle !default werden überschrieben
+// );

@@ -83,13 +83,13 @@ html {
 }
 
 .button-green {
-  background-color: #ffe0e5;
+  background-color: red;
   color: white;
 }
 
 .button-blue {
-  background-color: rgb(67, 67, 214);
+  background-color: aqua;
   color: white;
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main-dark.css.map */
