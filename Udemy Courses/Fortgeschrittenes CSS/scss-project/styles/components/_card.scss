@@ -1,5 +1,5 @@
 @use "sass:color";
-@use "../abstracts/button" as *; // * -> kann ohne einen Namespace verwendet werden (Variable kann direkt genutzt werden anstatt button.$button-gree-color)
+@use "../abstracts" as *; // * -> kann ohne einen Namespace verwendet werden (Variable kann direkt genutzt werden anstatt button.$button-gree-color)
 
 $card-text-color: black;
 
@@ -76,7 +76,7 @@ $card-text-color: black;
 .button-green {
     @extend %button;
 
-    background-color: $button-gree-color;
+    background-color: $button-green-color;
     color: white;
 }
 
