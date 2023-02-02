@@ -34,8 +34,10 @@ html {
   }
 }
 .card {
-  padding: 9rem 3rem;
-  height: 20rem;
+  padding-top: 3.75rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
+  height: 10rem;
   border-radius: 0.5rem;
   box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.5);
   color: black;

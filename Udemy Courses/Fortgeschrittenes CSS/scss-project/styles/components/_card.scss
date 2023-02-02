@@ -1,6 +1,12 @@
 .card {
-    padding: 9rem 3rem;
-    height: 20rem;
+    $card-text-color: black;
+    $card-heigth: 10rem;
+
+    padding-top: ($card-heigth - 2.5rem) / 2;
+    padding-right: 3rem;
+    padding-left: 3rem;
+
+    height: $card-heigth;
     border-radius: 0.5rem;
     box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.5);
     color: black;
