@@ -1,8 +1,17 @@
 @use "sass:color";
-$card-text-color: cyan;
+$card-text-color: black;
+
+@mixin linear-gradient-background($start, $send, $degree: 30deg) { // $degree: 30deg -> Standartparameter, wenn keiner übergeben wird
+    background-color: #3ff0a6;
+    background: linear-gradient($degree, $start, $send);
+
+    &:hover {
+        background: linear-gradient($degree, $send, $start);
+    }
+}
 
 .card {
-    
+
     $card-height: 10rem;
 
     padding-top: calc(($card-height - 2.5rem) / 2);
@@ -17,20 +26,20 @@ $card-text-color: cyan;
     color: $card-text-color;
     text-align: center;
 
-    background: linear-gradient(30deg, #3ff0a6, #49e023);
+    @include linear-gradient-background(#3ff0a6, #49e023, 200deg);
 
     &--blue {
         // in css -> .card--blue. & bedeutet, es wird angehängt
-        background-image: url("../images/logo.svg"), 
-        linear-gradient(30deg, #3ff0a6, #49e023);
+        background-image: url("../images/logo.svg"),
+            linear-gradient(30deg, #3ff0a6, #49e023);
         background-repeat: no-repeat;
         background-position: 1rem 1rem, center center;
         background-size: 4rem 4rem, 100% 100%;
     }
 
     @media (max-width: 74em) {
-        background-image: url("../images/logo.svg"), 
-        linear-gradient(30deg, #423ff0, #c227ad);
+        background-image: url("../images/logo.svg"),
+            linear-gradient(30deg, #423ff0, #c227ad);
     }
 
     h1,
