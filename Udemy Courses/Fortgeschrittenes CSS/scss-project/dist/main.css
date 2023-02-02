@@ -58,7 +58,7 @@ html {
 .card h1:hover,
 .card h2:hover,
 .card h3:hover {
-  color: greenyellow;
+  color: black;
 }
 @media (max-width: 74em) {
   .card h1:hover,
