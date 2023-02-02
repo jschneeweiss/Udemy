@@ -1,3 +1,7 @@
+/** 1200px oder schmaler **/
+/** 768px oder schmaler **/
+/** 992px oder schmaler **/
+/** 576px oder schmaler **/
 /* 16px = 1rem */
 @font-face {
   font-family: "Jost";
@@ -218,11 +222,5 @@ html {
   position: relative;
   top: -0.075em;
 }
-
-/** Breakpoints**/
-/** 1200px oder schmaler **/
-/** 992px oder schmaler **/
-/** 768px oder schmaler **/
-/** 576px oder schmaler **/
 
 /*# sourceMappingURL=main.css.map */
