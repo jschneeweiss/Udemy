@@ -83,12 +83,12 @@ html {
 }
 
 .button-green {
-  background-color: green;
+  background-color: #40ff40;
   color: white;
 }
 
 .button-blue {
-  background-color: blue;
+  background-color: rgb(67, 67, 214);
   color: white;
 }
 

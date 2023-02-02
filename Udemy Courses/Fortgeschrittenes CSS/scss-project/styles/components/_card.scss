@@ -1,4 +1,6 @@
 @use "sass:color";
+@use "../abstracts/button" as *; // * -> kann ohne einen Namespace verwendet werden (Variable kann direkt genutzt werden anstatt button.$button-gree-color)
+
 $card-text-color: black;
 
 @mixin linear-gradient-background($start, $send, $degree: 30deg) { // $degree: 30deg -> Standartparameter, wenn keiner übergeben wird
@@ -74,12 +76,12 @@ $card-text-color: black;
 .button-green {
     @extend %button;
 
-    background-color: green;
+    background-color: $button-gree-color;
     color: white;
 }
 
 .button-blue {
     @extend %button;
-    background-color: blue;
+    background-color: $button-blue-color;
     color: white;
 }
