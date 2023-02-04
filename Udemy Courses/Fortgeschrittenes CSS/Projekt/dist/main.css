@@ -264,11 +264,23 @@ html {
 .motivation__column-images {
   float: left;
   width: 66.6%;
+  position: relative;
 }
 
 .motivation__image {
-  max-width: 50%;
-  margin-left: 25%;
+  width: 50%;
+  position: absolute;
+}
+.motivation__image--first {
+  width: 33%;
+  top: 10rem;
+  left: 10%;
+  z-index: 2;
+}
+.motivation__image--third {
+  width: 75%;
+  right: 0rem;
+  z-index: 1;
 }
 
 /*# sourceMappingURL=main.css.map */
