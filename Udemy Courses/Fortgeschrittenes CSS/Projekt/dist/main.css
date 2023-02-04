@@ -270,17 +270,24 @@ html {
 .motivation__image {
   width: 50%;
   position: absolute;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
 }
 .motivation__image--first {
-  width: 33%;
-  top: 10rem;
-  left: 10%;
-  z-index: 2;
-}
-.motivation__image--third {
+  z-index: 1;
   width: 75%;
   right: 0rem;
-  z-index: 1;
+}
+.motivation__image--second {
+  z-index: 2;
+  width: 37%;
+  top: 10rem;
+  left: 10%;
+}
+.motivation__image--third {
+  z-index: 3;
+  width: 42%;
+  top: 5rem;
+  left: 40%;
 }
 
 /*# sourceMappingURL=main.css.map */
