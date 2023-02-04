@@ -267,15 +267,27 @@ html {
   position: relative;
 }
 
+/**
+* @param $top: Position from top (in rem)
+* @param $left: Position from left (in %)
+**/
 .motivation__image {
   width: 50%;
   position: absolute;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  box-sizing: content-box;
 }
 .motivation__image--first {
   z-index: 1;
   width: 75%;
-  right: 0rem;
+  left: 25%;
+  top: 0rem;
+  top: 0rem;
+  left: 25%;
+}
+.motivation__image--first:hover {
+  top: -0.66rem;
+  left: calc(25% - 0.66rem);
 }
 .motivation__image--second {
   z-index: 2;
@@ -283,11 +295,24 @@ html {
   top: 10rem;
   left: 10%;
 }
+.motivation__image--second:hover {
+  top: 9.34rem;
+  left: calc(10% - 0.66rem);
+}
 .motivation__image--third {
   z-index: 3;
   width: 42%;
   top: 5rem;
   left: 40%;
+}
+.motivation__image--third:hover {
+  top: 4.34rem;
+  left: calc(40% - 0.66rem);
+}
+.motivation__image:hover {
+  border: 0.33rem solid rgb(0, 226, 156);
+  padding: 0.33rem;
+  z-index: 10;
 }
 
 /*# sourceMappingURL=main.css.map */

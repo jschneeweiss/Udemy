@@ -36,28 +36,53 @@
     position: relative;
 }
 
+/**
+* @param $top: Position from top (in rem)
+* @param $left: Position from left (in %)
+**/
+@mixin motivation__image-position($top, $left) {
+    top: $top;
+    left: $left;
+
+    &:hover {
+        top: $top - 0.66rem;
+        left: calc(#{$left} - 0.66rem);
+    }
+}
+
 .motivation__image {
     width: 50%;    
     position: absolute;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 50%);
+    box-sizing: content-box;
 
     &--first {
         z-index: 1;
         width: 75%;
-        right: 0rem;        
+        left: 25%;
+        top: 0rem;
+
+        @include motivation__image-position(0rem, 25%);
     }
 
     &--second {
         z-index: 2;
-        width: 37%;
-        top: 10rem;
-        left: 10%;                
+        width: 37%;    
+        
+        @include motivation__image-position(10rem, 10%);
     }
 
     &--third {
         z-index: 3;
-        width: 42%;
-        top: 5rem;
-        left: 40%;        
+        width: 42%;                
+
+        @include motivation__image-position(5rem, 40%);
+    }
+
+    &:hover {
+        border: 0.33rem solid $color-primary;
+        padding: 0.33rem;
+
+        z-index: 10;
     }
 }
