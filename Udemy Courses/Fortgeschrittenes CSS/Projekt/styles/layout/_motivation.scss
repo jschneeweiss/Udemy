@@ -1,0 +1,48 @@
+.motivation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.motivation__text {
+    width: 20rem;
+    height: 30rem;
+    padding: 3rem;
+    position: relative;
+    left: -20rem;
+}
+
+.motivation__images {   
+    position: relative;
+}
+
+//Sonnenuntergang
+.motivation__images-image1 {
+    width: 20rem;
+    height: 12rem;
+    position: absolute;
+    z-index: 1;
+    left: 0rem;
+    top: -8rem;
+}
+
+//stamm
+.motivation__images-image2 {
+    width: 11rem;
+    height: 17rem;
+    position: absolute;
+    z-index: 2;
+    left: 11rem;
+    top: -10rem;
+}
+
+//See
+.motivation__images-image3 {
+    width: 22rem;
+    height: 12rem;
+    top: -12rem;
+    right: -26rem;
+    position: absolute;
+    z-index: 0;
+}
