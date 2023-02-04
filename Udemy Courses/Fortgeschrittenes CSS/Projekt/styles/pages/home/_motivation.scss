@@ -55,6 +55,9 @@
     position: absolute;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 50%);
     box-sizing: content-box;
+    filter: grayscale(50%);
+    transform: scale(1);
+    transition: filter ease-in-out 0.2s, transform ease-in-out 0.2s; // Bild wird in 0.2s von den Farben kräftiger
 
     &--first {
         z-index: 1;
@@ -80,9 +83,10 @@
     }
 
     &:hover {
-        border: 0.33rem solid $color-primary;
-        padding: 0.33rem;
-
         z-index: 10;
+        filter: grayscale(0%);
+        transform: scale(1.05); // Bilder werden 5% größer
+        border: 0.33rem solid $color-primary;
+        padding: 0.33rem;        
     }
 }
