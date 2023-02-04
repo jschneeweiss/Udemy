@@ -1,3 +1,5 @@
+@use "../../abstracts" as *;
+
 .motivation {
     margin-top: 2rem;
 }
@@ -5,6 +7,22 @@
 .motivation__column-text {
     float: left;
     width: 33.3%;
+}
+
+.motivation__text-heading {
+    margin-top: 4rem;
+    color: $color-secondary;
+    font-weight: 500;
+
+    // Strick über Header
+    &::before {
+        content: "";
+        display: block;
+        width: 3rem;
+        height: 0.25rem;
+        background-color: $color-secundary-light;
+        margin-bottom: 0.5rem;
+    }
 }
 
 .motivation__column-images {

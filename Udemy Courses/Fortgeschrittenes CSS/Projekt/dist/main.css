@@ -242,6 +242,20 @@ html {
   width: 33.3%;
 }
 
+.motivation__text-heading {
+  margin-top: 4rem;
+  color: #26464d;
+  font-weight: 500;
+}
+.motivation__text-heading::before {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 0.25rem;
+  background-color: #407682;
+  margin-bottom: 0.5rem;
+}
+
 .motivation__column-images {
   float: left;
   width: 66.6%;
