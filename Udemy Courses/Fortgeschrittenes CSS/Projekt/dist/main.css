@@ -256,6 +256,11 @@ html {
   margin-bottom: 0.5rem;
 }
 
+.motivation__text {
+  color: #26464d;
+  margin-top: 0.2rem;
+}
+
 .motivation__column-images {
   float: left;
   width: 66.6%;
