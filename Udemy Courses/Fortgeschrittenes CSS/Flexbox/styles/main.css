@@ -16,7 +16,7 @@ html {
 }
 
 .card {
-    flex: 0 1 200px;
+    flex: 1 0 300px; /* darf wachsen, darf nicht kleiner als 300px werden*/
     padding: 4rem 3rem;
     border-radius: 0.5rem;
     box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.5);
@@ -30,6 +30,6 @@ html {
 }
 
 .main-heading {
-    flex: 1 1 300px;
+    flex: 0 1 600px; /* darf nicht wachsen, darf nicht größer als 600px werden */
     background-color: gray;
 }
