@@ -11,8 +11,9 @@ html {
 .row {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: stretch;
+    flex-wrap: wrap;
 }
 
 .card {
