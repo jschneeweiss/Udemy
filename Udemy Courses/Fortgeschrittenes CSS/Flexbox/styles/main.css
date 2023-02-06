@@ -10,9 +10,9 @@ html {
   
 .row {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch;
 }
 
 .card {
@@ -29,6 +29,13 @@ html {
 }
 
 .main-heading {
+    order: 1;
     background-color: gray;
+    align-self: flex-start;
 }
 
+@media (max-width: 900px) {
+    .main-heading {
+        order: -1;
+    }
+}
