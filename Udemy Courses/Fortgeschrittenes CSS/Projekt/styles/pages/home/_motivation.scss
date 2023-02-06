@@ -10,12 +10,14 @@ $-motivation__image-hover-border:0.33rem;
 .motivation__column-text {
     float: left;
     width: 33.3%;
+    padding-right: 4.5rem;
 }
 
 .motivation__text-heading {
     margin-top: 4rem;
     color: $color-secondary;
     font-weight: 500;
+    font-size: 2rem;
 
     // Strich über Header
     &::before {
@@ -31,6 +33,7 @@ $-motivation__image-hover-border:0.33rem;
 .motivation__text {
     color: $color-secondary;
     margin-top: 0.2rem;
+    font-size: 1.1rem;
 }
 
 .motivation__column-images {

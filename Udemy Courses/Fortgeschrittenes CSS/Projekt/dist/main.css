@@ -245,12 +245,14 @@ html {
 .motivation__column-text {
   float: left;
   width: 33.3%;
+  padding-right: 4.5rem;
 }
 
 .motivation__text-heading {
   margin-top: 4rem;
   color: #26464d;
   font-weight: 500;
+  font-size: 2rem;
 }
 .motivation__text-heading::before {
   content: "";
@@ -264,6 +266,7 @@ html {
 .motivation__text {
   color: #26464d;
   margin-top: 0.2rem;
+  font-size: 1.1rem;
 }
 
 .motivation__column-images {
