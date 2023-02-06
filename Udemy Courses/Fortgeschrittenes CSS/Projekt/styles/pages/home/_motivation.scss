@@ -1,5 +1,8 @@
 @use "../../abstracts" as *;
 
+$-motivation__image-hover-padding: 0.33rem;
+$-motivation__image-hover-border:0.33rem;
+
 .motivation {
     margin-top: 2rem;
 }
@@ -45,9 +48,11 @@
     top: $top;
     left: $left;
 
+    $hover-offset: $-motivation__image-hover-padding + $-motivation__image-hover-border;
+
     &:hover {
-        top: $top - 0.66rem;
-        left: calc(#{$left} - 0.66rem);
+        top: $top - $hover-offset;
+        left: calc(#{$left} - #{$hover-offset});
     }
 }
 
@@ -87,7 +92,7 @@
         z-index: 10;
         filter: grayscale(0%);
         transform: scale(1.05); // Bilder werden 5% größer
-        border: 0.33rem solid $color-primary;
-        padding: 0.33rem;        
+        border: $-motivation__image-hover-border solid $color-primary;
+        padding: $-motivation__image-hover-padding;        
     }
 }
