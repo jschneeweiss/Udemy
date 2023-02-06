@@ -10,8 +10,9 @@ html {
   
 .row {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: flex-start;
 }
 
 .card {
@@ -25,5 +26,9 @@ html {
 
 .card--second {
     background: linear-gradient(30deg,  #803ff0, #e023d3);
+}
+
+.main-heading {
+    background-color: gray;
 }
 
