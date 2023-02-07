@@ -3,9 +3,9 @@
 $-tours-background-color: $color-secondary-dark;
 
 .tours {
-    background-color: $-tours-background-color;
-    height: 30rem;
+    background-color: $-tours-background-color;    
     position: relative;
+    padding-bottom: 5rem;
 }
 
 %tours__before-and-after {
@@ -67,13 +67,34 @@ $-tours-background-color: $color-secondary-dark;
 
 .tours__card {
     width: 20%;
+    position: relative;
+    height: 20rem;
+    overflow: hidden;
+}
+
+.tours__card-icon-container {
+    background-color: $color-primary;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .tours__card-img {
     width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .tours__card-icon {
     width: 4rem;
     color: white;
+    display: block;
+}
+
+.tours__card-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
