@@ -1,0 +1,7 @@
+@use "../../abstracts/" as *;
+
+$-tours-background-color: $color-secondary-dark;
+
+.tours {
+    background-color: $-tours-background-color;
+}
