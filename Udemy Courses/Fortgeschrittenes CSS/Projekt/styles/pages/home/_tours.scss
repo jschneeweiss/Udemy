@@ -97,4 +97,38 @@ $-tours-background-color: $color-secondary-dark;
     left: 0;
     right: 0;
     bottom: 0;
+    color: white;
+    padding: 0 1rem;
+}
+
+.tours__card-heading {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+.tours__card-location {
+    font-size: 0.9rem;
+    margin-bottom: 0.33rem;
+    display: flex;
+}
+
+.tours__cards-location-icon {
+    font-size: 1.25em;
+}
+
+.tours__card-location-text {
+    line-height: 1.9rem;
+}
+
+// .tours__card-location::after {
+//     content: "";
+//     display: block;
+//     width: 7rem;
+//     height: 0.15rem;
+//     background-color: green;
+//     margin-top: 0.4rem;
+// }
+
+.tours__card-desc {
+    font-size: 0.9rem;
 }
