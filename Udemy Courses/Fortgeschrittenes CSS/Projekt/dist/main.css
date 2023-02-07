@@ -72,6 +72,19 @@ html {
 
 .header__container {
   position: relative;
+  max-width: 75rem;
+  margin: 0px auto;
+  padding: 0 2rem;
+}
+.header__container::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+@media (max-width: 36em) {
+  .header__container {
+    padding: 0 1rem;
+  }
 }
 
 .header::before,
@@ -409,6 +422,19 @@ html {
 .tours__container {
   position: relative;
   z-index: 1;
+  max-width: 75rem;
+  margin: 0px auto;
+  padding: 0 2rem;
+}
+.tours__container::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+@media (max-width: 36em) {
+  .tours__container {
+    padding: 0 1rem;
+  }
 }
 
 .tours__heading {
