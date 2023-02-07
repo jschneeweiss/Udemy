@@ -118,6 +118,7 @@ $-tours-background-color: $color-secondary-dark;
 
 .tours__card-location-text {
     line-height: 1.9rem;
+    padding-left: 0.15rem;
 }
 
 // .tours__card-location::after {
@@ -131,4 +132,9 @@ $-tours-background-color: $color-secondary-dark;
 
 .tours__card-desc {
     font-size: 0.9rem;
+    padding: 1rem 0;
+    background-image: linear-gradient(90deg, $color-primary 60%, transparent 60%);
+    background-position-y: top;
+    background-size: 100% 0.125rem;
+    background-repeat: no-repeat;
 }
