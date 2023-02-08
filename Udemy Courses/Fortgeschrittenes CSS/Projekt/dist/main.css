@@ -508,6 +508,11 @@ html {
   padding: 3rem 1rem 0 1rem;
   text-shadow: 0 0 0.125rem black;
   background-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.25) 20%);
+  transform: translate(0, calc(100% - 7rem));
+  transition: transform 1s ease-in-out;
+}
+.tours__card:hover .tours__card-content {
+  transform: translate(0, 0);
 }
 
 .tours__card-heading {
