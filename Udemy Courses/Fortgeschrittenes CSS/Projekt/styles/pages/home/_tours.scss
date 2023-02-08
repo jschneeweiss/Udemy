@@ -3,6 +3,7 @@
 $-tours-background-color: $color-secondary-dark;
 
 $-tours-icon-width: 3rem;
+$-tours-animation-duration: 0.25s;
 
 .tours {
     background-color: $-tours-background-color;    
@@ -72,6 +73,14 @@ $-tours-icon-width: 3rem;
     position: relative;
     height: 21rem;
     overflow: hidden;
+
+    transform: scale(1);
+    transition: transform $-tours-animation-duration ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 0.25rem black;
+    }
 }
 
 .tours__card-icon-background {
@@ -81,10 +90,11 @@ $-tours-icon-width: 3rem;
     left: 0;
     width: 100%;
     height: $-tours-icon-width;
+    box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5);
 
     transform: translate(calc(-100% + #{$-tours-icon-width}), 0);
 
-    transition: transform 1s ease-in-out;
+    transition: transform $-tours-animation-duration ease-in-out;
 
     .tours__card:hover & {
         transform: translate(0, 0);
@@ -107,7 +117,7 @@ $-tours-icon-width: 3rem;
     width: 100%;
 
     transform: translate(0, 0);
-    transition: transform 1s ease-in-out;
+    transition: transform $-tours-animation-duration ease-in-out;
 
     .tours__card:hover & {
         transform: translate(calc(50% - (#{$-tours-icon-width} / 2)), 0);
@@ -133,7 +143,7 @@ $-tours-icon-width: 3rem;
     background-image: linear-gradient(180deg, transparent 0%, rgb(0, 0, 0, 0.25) 20%);
 
     transform: translate(0, calc(100% - 7rem));
-    transition: transform 1s ease-in-out;
+    transition: transform $-tours-animation-duration ease-in-out;
 
     .tours__card:hover & {
         transform: translate(0, 0);

@@ -457,6 +457,12 @@ html {
   position: relative;
   height: 21rem;
   overflow: hidden;
+  transform: scale(1);
+  transition: transform 0.25s ease-in-out;
+}
+.tours__card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 0.25rem black;
 }
 
 .tours__card-icon-background {
@@ -466,8 +472,9 @@ html {
   left: 0;
   width: 100%;
   height: 3rem;
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5);
   transform: translate(calc(-100% + 3rem), 0);
-  transition: transform 1s ease-in-out;
+  transition: transform 0.25s ease-in-out;
 }
 .tours__card:hover .tours__card-icon-background {
   transform: translate(0, 0);
@@ -487,7 +494,7 @@ html {
   left: 0;
   width: 100%;
   transform: translate(0, 0);
-  transition: transform 1s ease-in-out;
+  transition: transform 0.25s ease-in-out;
 }
 .tours__card:hover .tours__card-icon-container {
   transform: translate(calc(50% - (3rem / 2)), 0);
@@ -509,7 +516,7 @@ html {
   text-shadow: 0 0 0.125rem black;
   background-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.25) 20%);
   transform: translate(0, calc(100% - 7rem));
-  transition: transform 1s ease-in-out;
+  transition: transform 0.25s ease-in-out;
 }
 .tours__card:hover .tours__card-content {
   transform: translate(0, 0);
