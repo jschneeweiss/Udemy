@@ -2,6 +2,8 @@
 
 $-tours-background-color: $color-secondary-dark;
 
+$-tours-icon-width: 3rem;
+
 .tours {
     background-color: $-tours-background-color;    
     position: relative;
@@ -78,9 +80,9 @@ $-tours-background-color: $color-secondary-dark;
     top: 0;
     left: 0;
     width: 100%;
-    height: 3rem;
+    height: $-tours-icon-width;
 
-    transform: translate(calc(-100% + 3rem), 0);
+    transform: translate(calc(-100% + #{$-tours-icon-width}), 0);
 
     transition: transform 1s ease-in-out;
 
@@ -98,13 +100,24 @@ $-tours-background-color: $color-secondary-dark;
     filter: brightness(80%);
 }
 
-.tours__card-icon {
+.tours__card-icon-container {
     position: absolute;
     top: 0;
     left: 0;
-    width: 3rem;
+    width: 100%;
+
+    transform: translate(0, 0);
+    transition: transform 1s ease-in-out;
+
+    .tours__card:hover & {
+        transform: translate(calc(50% - (#{$-tours-icon-width} / 2)), 0);
+    }
+}
+
+.tours__card-icon {
+    width: $-tours-icon-width;
     color: white;
-    display: block;
+    display: block;    
 }
 
 .tours__card-content {
