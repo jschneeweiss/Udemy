@@ -608,6 +608,13 @@ html {
   top: 0;
   width: 100%;
 }
+@supports (object-fit: cover) and (object-position: center center) {
+  .story__video {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
 
 .story__video-colorize {
   position: absolute;
@@ -653,16 +660,22 @@ html {
   max-width: 40rem;
   margin: 0 auto;
   color: white;
+  text-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.5);
   column-count: 2;
   column-gap: 4rem;
   column-rule: 0.125rem solid rgba(255, 255, 255, 0.5);
-  text-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.5);
   text-align: justify;
+}
+@media (max-width: 48em) {
+  .story__desc {
+    column-count: 1;
+    text-align: left;
+  }
 }
 
 .story__book {
   text-align: center;
-  padding: 3rem 0 5rem 0;
+  padding: 4rem 0 4rem 0;
 }
 
 /*# sourceMappingURL=main.css.map */
