@@ -566,4 +566,60 @@ html {
   background-repeat: no-repeat;
 }
 
+.story__book a, .story__desc, .story__heading {
+  color: white;
+  text-shadow: 0 0 0.125rem black;
+}
+
+.story {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: justify;
+}
+.story__video {
+  position: absolute;
+}
+.story__container {
+  position: relative;
+}
+.story__heading {
+  text-align: center;
+  letter-spacing: 0.2rem;
+  margin-top: 0;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+}
+.story__heading-desc {
+  margin-bottom: 1rem;
+  color: rgb(0, 226, 156);
+  column-span: all;
+}
+.story__desc {
+  max-width: 44rem;
+  margin: 0 auto;
+  column-width: 17rem;
+  column-gap: 6em;
+  column-rule: 1px solid white;
+}
+.story__book {
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 1.5rem;
+  margin: 2rem auto;
+  padding: 0.5rem;
+  width: 13rem;
+  text-transform: uppercase;
+}
+.story__book a {
+  font-weight: bold;
+}
+.story__book a:link {
+  text-decoration: none;
+}
+.story__book a:hover {
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=main.css.map */
