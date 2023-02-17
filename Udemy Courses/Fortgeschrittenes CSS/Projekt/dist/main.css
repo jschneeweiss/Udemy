@@ -72,6 +72,19 @@ html {
 
 .header__container {
   position: relative;
+  max-width: 75rem;
+  margin: 0px auto;
+  padding: 0 2rem;
+}
+.header__container::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+@media (max-width: 36em) {
+  .header__container {
+    padding: 0 1rem;
+  }
 }
 
 .header::before,
@@ -240,6 +253,7 @@ html {
 
 .motivation {
   margin-top: 2rem;
+  padding-bottom: 3rem;
 }
 
 .motivation__column-text {
@@ -366,6 +380,190 @@ html {
   transform: scale(1.05);
   border: 0.33rem solid rgb(0, 226, 156);
   padding: 0.33rem;
+}
+
+.tours {
+  background-color: #011820;
+  position: relative;
+  padding-bottom: 5rem;
+}
+
+.tours::after, .tours::before {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  content: "Tame the wild";
+  text-transform: uppercase;
+  color: #011820;
+  font-size: min(11.1111111111vw, 10rem);
+  font-weight: bold;
+  text-shadow: 0 0 1px white;
+  text-align: center;
+  z-index: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@supports (-webkit-text-stroke: 1px rgba(255, 255, 255, 0.2)) or (text-stroke: 1px rgba(255, 255, 255, 0.2)) {
+  .tours::before {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+    text-stroke: 1px rgba(255, 255, 255, 0.2);
+    text-shadow: none;
+  }
+}
+
+@supports (-webkit-text-stroke: 1px transparent) or (text-stroke: 1px transparent) {
+  .tours::after {
+    -webkit-text-stroke: 1px transparent;
+    text-stroke: 1px transparent;
+    text-shadow: none;
+  }
+}
+
+.tours__container {
+  position: relative;
+  z-index: 1;
+  max-width: 75rem;
+  margin: 0px auto;
+  padding: 0 2rem;
+}
+.tours__container::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+@media (max-width: 36em) {
+  .tours__container {
+    padding: 0 1rem;
+  }
+}
+
+.tours__heading {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.tours__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.tours__card {
+  flex: 0 0 14.2rem;
+  position: relative;
+  margin-top: 3rem;
+  height: 21rem;
+  overflow: hidden;
+  box-shadow: 0 0 1rem transparent;
+  transform: scale(1);
+  transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out, z-index 0.25s linear;
+  z-index: 0;
+}
+.tours__card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 0.25rem black;
+  transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out, z-index 0s linear;
+  z-index: 1000;
+}
+
+.tours__card-icon-background {
+  background-color: rgb(0, 226, 156);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3rem;
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5);
+  transform: translate(calc(-100% + 3rem), 0);
+  transition: transform 0.25s ease-in-out;
+}
+.tours__card:hover .tours__card-icon-background {
+  transform: translate(0, 0);
+}
+
+.tours__card-img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: brightness(80%);
+}
+
+.tours__card-icon-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translate(0, 0);
+  transition: transform 0.25s ease-in-out;
+}
+.tours__card:hover .tours__card-icon-container {
+  transform: translate(calc(50% - (3rem / 2)), 0);
+}
+
+.tours__card-icon {
+  width: 3rem;
+  color: white;
+  display: block;
+}
+
+.tours__card-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: white;
+  padding: 3rem 1rem 0 1rem;
+  text-shadow: 0 0 0.125rem black;
+  background-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.25) 20%);
+  transform: translate(0, calc(100% - 7rem));
+  transition: transform 0.25s ease-in-out;
+}
+.tours__card:hover .tours__card-content {
+  transform: translate(0, 0);
+}
+
+.tours__card-heading {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.tours__card-location {
+  font-size: 0.9rem;
+  margin-bottom: 0.33rem;
+  display: flex;
+}
+
+.tours__cards-location-icon {
+  font-size: 1.25em;
+}
+
+.tours__card-location-text {
+  line-height: 1.9rem;
+  padding-left: 0.15rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.tours__card-desc {
+  font-size: 0.8rem;
+  padding: 0.9rem 0;
+  background-image: linear-gradient(90deg, rgb(0, 226, 156) 60%, transparent 60%);
+  background-position-y: top;
+  background-size: 100% 0.125rem;
+  background-repeat: no-repeat;
 }
 
 /*# sourceMappingURL=main.css.map */
