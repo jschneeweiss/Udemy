@@ -32,3 +32,23 @@
 
     @include make-container();
 }
+
+.story__heading {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    font-size: 2rem;
+}
+
+.story__desc {
+    max-width: 40rem;
+    margin: 0 auto;
+    color: white;
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 0.125rem solid rgb(255, 255, 255, 50%);
+}
