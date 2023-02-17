@@ -1,0 +1,25 @@
+@use "../abstracts" as *;
+@use "sass:color";
+
+.button {
+    border: 0.125rem solid currentColor;
+    border-radius: 10000px;
+    color: $color-primary;
+    text-decoration: none;
+    padding: 1rem 6rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.25rem;
+
+    &:hover {
+        color: color.scale($color-primary, $lightness: 20%);
+    }
+}
+
+.button--white {
+    color: white;
+
+    &:hover {
+        color: rgb(230, 230, 230);
+    }
+}

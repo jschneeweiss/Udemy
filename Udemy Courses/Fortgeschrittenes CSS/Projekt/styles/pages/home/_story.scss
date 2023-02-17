@@ -23,7 +23,7 @@
     left: 0;
     right: 0;
 
-    background-color: color.scale($color-primary, $alpha: -50%);
+    background-color: color.scale($color-primary, $alpha: -80%);
 }
 
 .story__container {
@@ -51,4 +51,9 @@
     column-count: 2;
     column-gap: 4rem;
     column-rule: 0.125rem solid rgb(255, 255, 255, 50%);
+}
+
+.story__book {
+    text-align: center;
+    padding: 2rem 0;
 }
