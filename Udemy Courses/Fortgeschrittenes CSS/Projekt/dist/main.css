@@ -252,6 +252,7 @@ html {
 }
 
 .button {
+  display: inline-block;
   border: 0.125rem solid currentColor;
   border-radius: 10000px;
   color: rgb(0, 226, 156);
@@ -265,8 +266,15 @@ html {
   color: #1cffb9;
 }
 
+.button--background-blur {
+  -webkit-backdrop-filter: blur(3rem);
+  backdrop-filter: blur(3rem);
+}
+
 .button--white {
   color: white;
+  text-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.5);
 }
 .button--white:hover {
   color: rgb(230, 230, 230);
@@ -608,7 +616,7 @@ html {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 226, 156, 0.2);
+  background-color: rgba(0, 226, 156, 0.25);
 }
 
 .story__container {
@@ -638,6 +646,7 @@ html {
   padding-top: 4rem;
   padding-bottom: 4rem;
   font-size: 2rem;
+  text-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.5);
 }
 
 .story__desc {
@@ -647,11 +656,13 @@ html {
   column-count: 2;
   column-gap: 4rem;
   column-rule: 0.125rem solid rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.5);
+  text-align: justify;
 }
 
 .story__book {
   text-align: center;
-  padding: 2rem 0;
+  padding: 3rem 0 5rem 0;
 }
 
 /*# sourceMappingURL=main.css.map */

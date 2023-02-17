@@ -23,7 +23,7 @@
     left: 0;
     right: 0;
 
-    background-color: color.scale($color-primary, $alpha: -80%);
+    background-color: color.scale($color-primary, $alpha: -75%);
 }
 
 .story__container {
@@ -42,6 +42,7 @@
     padding-top: 4rem;
     padding-bottom: 4rem;
     font-size: 2rem;
+    text-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.5);    
 }
 
 .story__desc {
@@ -50,10 +51,12 @@
     color: white;
     column-count: 2;
     column-gap: 4rem;
-    column-rule: 0.125rem solid rgb(255, 255, 255, 50%);
+    column-rule: 0.125rem solid rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.5);
+    text-align: justify;
 }
 
 .story__book {
     text-align: center;
-    padding: 2rem 0;
+    padding: 3rem 0 5rem 0;
 }
