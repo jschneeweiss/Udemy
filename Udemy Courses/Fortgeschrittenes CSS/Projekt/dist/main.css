@@ -566,4 +566,46 @@ html {
   background-repeat: no-repeat;
 }
 
+.story {
+  position: relative;
+  overflow: hidden;
+}
+
+.story__video {
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+.story__video-colorize {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 226, 156, 0.5);
+}
+
+.story__container {
+  position: relative;
+  z-index: 1;
+  max-width: 75rem;
+  margin: 0px auto;
+  padding: 0 2rem;
+}
+.story__container::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+@media (max-width: 36em) {
+  .story__container {
+    padding: 0 1rem;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
