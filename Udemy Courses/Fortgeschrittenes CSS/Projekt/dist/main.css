@@ -251,6 +251,35 @@ html {
   top: -0.075em;
 }
 
+.button {
+  display: inline-block;
+  border: 0.125rem solid currentColor;
+  border-radius: 10000px;
+  color: rgb(0, 226, 156);
+  text-decoration: none;
+  padding: 1rem 6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+.button:hover {
+  color: #1cffb9;
+}
+
+.button--background-blur {
+  -webkit-backdrop-filter: blur(3rem);
+  backdrop-filter: blur(3rem);
+}
+
+.button--white {
+  color: white;
+  text-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.5);
+}
+.button--white:hover {
+  color: rgb(230, 230, 230);
+}
+
 .motivation {
   margin-top: 2rem;
   padding-bottom: 3rem;
@@ -564,6 +593,89 @@ html {
   background-position-y: top;
   background-size: 100% 0.125rem;
   background-repeat: no-repeat;
+}
+
+.story {
+  position: relative;
+  overflow: hidden;
+}
+
+.story__video {
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+@supports (object-fit: cover) and (object-position: center center) {
+  .story__video {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+.story__video-colorize {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 226, 156, 0.1);
+}
+
+.story__container {
+  position: relative;
+  z-index: 1;
+  max-width: 75rem;
+  margin: 0px auto;
+  padding: 0 2rem;
+}
+.story__container::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+@media (max-width: 36em) {
+  .story__container {
+    padding: 0 1rem;
+  }
+}
+
+.story__heading {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  font-size: 2rem;
+  text-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.5);
+}
+
+.story__desc {
+  max-width: 40rem;
+  margin: 0 auto;
+  color: white;
+  text-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.5);
+  column-count: 2;
+  column-gap: 4rem;
+  column-rule: 0.125rem solid rgba(255, 255, 255, 0.5);
+  text-align: justify;
+}
+@media (max-width: 48em) {
+  .story__desc {
+    column-count: 1;
+    text-align: left;
+  }
+}
+
+.story__book {
+  text-align: center;
+  padding: 4rem 0 4rem 0;
 }
 
 /*# sourceMappingURL=main.css.map */
