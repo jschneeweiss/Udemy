@@ -1,4 +1,7 @@
+@use "sass:color";
 @use "../../abstracts/" as *;
+
+$-offers-card-border-width: (1rem / 16);
 
 .offers {
   background-color: rgb(240, 240, 240);
@@ -16,8 +19,27 @@
 .offers__card {
   flex: 1 0 0px;
   margin: 0 0.66rem;
+  padding: 2rem 1rem;
   background-color: white;
   box-shadow: 0.5rem 0.5rem 2rem black;
-  border-left: (1rem / 16) solid gray;
-  border-bottom: 0.75rem solid $color-primary;
+  border-left: $-offers-card-border-width solid #e2e2e2;
+  border-right: $-offers-card-border-width solid #e2e2e2;
+  border-top: $-offers-card-border-width solid #e2e2e2;
+
+  position: relative;
+}
+
+.offers__card::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: -$-offers-card-border-width;
+  right: -$-offers-card-border-width;
+  height: 0.75rem;
+  background-color: $color-primary;
+  border-left: $-offers-card-border-width solid
+    color.scale($color-primary, $saturation: -50%, $lightness: 25%);
+  border-right: $-offers-card-border-width solid
+    color.scale($color-primary, $saturation: -50%, $lightness: 25%);
 }
