@@ -684,22 +684,12 @@ html {
 }
 
 .offers__container {
-  max-width: 75rem;
-  margin: 0px auto;
-  padding: 0 2rem;
   display: flex;
+  flex-wrap: wrap;
   padding-top: 4rem;
   padding-bottom: 4rem;
-}
-.offers__container::after {
-  display: block;
-  clear: both;
-  content: "";
-}
-@media (max-width: 36em) {
-  .offers__container {
-    padding: 0 1rem;
-  }
+  margin-left: -0.66rem;
+  margin-right: -0.66rem;
 }
 
 .offers__card {
