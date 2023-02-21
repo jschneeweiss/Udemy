@@ -1,0 +1,23 @@
+@use "../../abstracts/" as *;
+
+.offers {
+  background-color: rgb(240, 240, 240);
+  min-height: 5rem;
+}
+
+.offers__container {
+  @include make-container();
+
+  display: flex;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.offers__card {
+  flex: 1 0 0px;
+  margin: 0 0.66rem;
+  background-color: white;
+  box-shadow: 0.5rem 0.5rem 2rem black;
+  border-left: (1rem / 16) solid gray;
+  border-bottom: 0.75rem solid $color-primary;
+}
