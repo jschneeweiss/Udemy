@@ -695,7 +695,7 @@ html {
 .offers__card {
   flex: 1 0 0px;
   margin: 0 0.66rem;
-  padding: 2rem 1rem;
+  padding: 0;
   background-color: white;
   box-shadow: 0.5rem 0.5rem 2rem black;
   border-left: 0.0625rem solid #e2e2e2;
@@ -715,6 +715,17 @@ html {
   background-color: rgb(0, 226, 156);
   border-left: 0.0625rem solid #5fcaa9;
   border-right: 0.0625rem solid #5fcaa9;
+}
+
+.offers__image-container {
+  background-color: rgb(0, 226, 156);
+  margin: -0.125rem -0.0625rem;
+}
+
+.offers__image {
+  width: 100%;
+  filter: grayscale(100%);
+  mix-blend-mode: multiply;
 }
 
 /*# sourceMappingURL=main.css.map */

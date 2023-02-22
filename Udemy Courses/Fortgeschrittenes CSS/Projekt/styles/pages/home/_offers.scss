@@ -21,7 +21,7 @@ $-offer-card-margin: 0.66rem;
 .offers__card {
   flex: 1 0 0px;
   margin: 0 $-offer-card-margin;
-  padding: 2rem 1rem;
+  padding: 0;
   background-color: white;
   box-shadow: 0.5rem 0.5rem 2rem black;
   border-left: $-offers-card-border-width solid #e2e2e2;
@@ -44,4 +44,15 @@ $-offer-card-margin: 0.66rem;
     color.scale($color-primary, $saturation: -50%, $lightness: 25%);
   border-right: $-offers-card-border-width solid
     color.scale($color-primary, $saturation: -50%, $lightness: 25%);
+}
+
+.offers__image-container {
+  background-color: $color-primary;
+  margin: -$-offers-card-border-width -$-offers-card-border-width 0 -$-offers-card-border-width;
+}
+
+.offers__image {
+  width: 100%;
+  filter: grayscale(100%);
+  mix-blend-mode: multiply;
 }
