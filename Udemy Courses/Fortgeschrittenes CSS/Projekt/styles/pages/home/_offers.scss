@@ -2,6 +2,7 @@
 @use "../../abstracts/" as *;
 
 $-offers-card-border-width: (1rem / 16);
+$-offers-card-border-color: rgba(0, 0, 0, 0.15);
 $-offer-card-margin: 0.66rem;
 
 .offers {
@@ -24,9 +25,9 @@ $-offer-card-margin: 0.66rem;
   padding: 0;
   background-color: white;
   box-shadow: 0.5rem 0.5rem 2rem black;
-  border-left: $-offers-card-border-width solid #e2e2e2;
-  border-right: $-offers-card-border-width solid #e2e2e2;
-  border-top: $-offers-card-border-width solid #e2e2e2;
+  border-left: $-offers-card-border-width solid $-offers-card-border-color;
+  border-right: $-offers-card-border-width solid $-offers-card-border-color;
+  border-top: $-offers-card-border-width solid $-offers-card-border-color;
 
   position: relative;
 }
@@ -49,7 +50,22 @@ $-offer-card-margin: 0.66rem;
 .offers__image-container {
   position: relative;
   background-color: $color-primary;
-  margin: -$-offers-card-border-width -$-offers-card-border-width 0 -$-offers-card-border-width;
+  margin-top: -$-offers-card-border-width;
+  margin-right: -$-offers-card-border-width;
+  margin-left: -$-offers-card-border-width;
+}
+
+.offers__image-container::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  border-top: $-offers-card-border-width solid $-offers-card-border-color;
+  border-right: $-offers-card-border-width solid $-offers-card-border-color;
+  border-left: $-offers-card-border-width solid $-offers-card-border-color;
 }
 
 .offers__image-container::after {
@@ -66,6 +82,7 @@ $-offer-card-margin: 0.66rem;
   );
   background-repeat: no-repeat;
   background-position: 50% 100%;
+  border: 1px;
 }
 
 .offers__image {
