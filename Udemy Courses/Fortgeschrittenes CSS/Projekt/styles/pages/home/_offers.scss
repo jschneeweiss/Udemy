@@ -22,9 +22,9 @@ $-offer-card-margin: 0.66rem;
 .offers__card {
   flex: 1 0 0px;
   margin: 0 $-offer-card-margin;
-  padding: 0 0 1.5rem 0;
+  padding: 0 0 2rem 0;
   background-color: white;
-  box-shadow: 0.5rem 0.5rem 2rem black;
+  box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.5);
   border-left: $-offers-card-border-width solid $-offers-card-border-color;
   border-right: $-offers-card-border-width solid $-offers-card-border-color;
   border-top: $-offers-card-border-width solid $-offers-card-border-color;
@@ -92,8 +92,8 @@ $-offer-card-margin: 0.66rem;
 }
 
 .offers__content {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .offers__content-heading {
@@ -144,4 +144,18 @@ $-offer-card-margin: 0.66rem;
 
 .offers__content-info-duration-text {
   padding-left: 0.25rem;
+}
+
+.offers__content-price-container {
+  padding-top: 0.75rem;
+  font-size: 1rem;
+  color: $color-secondary;
+}
+
+.offers__content-price {
+  display: block; // Setzt den Preis in eine neue Zeile
+  color: $color-primary;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 0.9em;
 }

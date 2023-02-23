@@ -695,9 +695,9 @@ html {
 .offers__card {
   flex: 1 0 0px;
   margin: 0 0.66rem;
-  padding: 0 0 1.5rem 0;
+  padding: 0 0 2rem 0;
   background-color: white;
-  box-shadow: 0.5rem 0.5rem 2rem black;
+  box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.5);
   border-left: 0.0625rem solid rgba(0, 0, 0, 0.15);
   border-right: 0.0625rem solid rgba(0, 0, 0, 0.15);
   border-top: 0.0625rem solid rgba(0, 0, 0, 0.15);
@@ -758,8 +758,8 @@ html {
 }
 
 .offers__content {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .offers__content-heading {
@@ -794,6 +794,20 @@ html {
 
 .offers__content-info-duration-text {
   padding-left: 0.25rem;
+}
+
+.offers__content-price-container {
+  padding-top: 0.75rem;
+  font-size: 1rem;
+  color: #26464d;
+}
+
+.offers__content-price {
+  display: block;
+  color: rgb(0, 226, 156);
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 0.9em;
 }
 
 /*# sourceMappingURL=main.css.map */
