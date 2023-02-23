@@ -97,6 +97,10 @@ $-half-pixel-width: 1rem / 32;
   background-repeat: no-repeat;
   background-position: 50% 100%;
   border: 1px;
+
+  @media (max-width: $breakpoint-xs) {
+    height: 5rem;
+  }
 }
 
 .offers__image {
