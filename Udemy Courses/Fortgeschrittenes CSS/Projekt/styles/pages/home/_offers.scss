@@ -22,7 +22,7 @@ $-offer-card-margin: 0.66rem;
 .offers__card {
   flex: 1 0 0px;
   margin: 0 $-offer-card-margin;
-  padding: 0;
+  padding: 0 0 1.5rem 0;
   background-color: white;
   box-shadow: 0.5rem 0.5rem 2rem black;
   border-left: $-offers-card-border-width solid $-offers-card-border-color;

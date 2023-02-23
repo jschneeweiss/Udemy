@@ -695,7 +695,7 @@ html {
 .offers__card {
   flex: 1 0 0px;
   margin: 0 0.66rem;
-  padding: 0;
+  padding: 0 0 1.5rem 0;
   background-color: white;
   box-shadow: 0.5rem 0.5rem 2rem black;
   border-left: 0.0625rem solid rgba(0, 0, 0, 0.15);
