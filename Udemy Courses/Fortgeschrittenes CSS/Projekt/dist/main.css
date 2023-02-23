@@ -757,4 +757,43 @@ html {
   mix-blend-mode: multiply;
 }
 
+.offers__content {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.offers__content-heading {
+  color: #26464d;
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+
+.offers__content-subheading {
+  color: rgb(0, 226, 156);
+  font-size: 1rem;
+}
+
+.offers__content-info {
+  margin-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  display: flex;
+  background-image: linear-gradient(90deg, transparent calc(50% - 0.03125rem), rgba(0, 0, 0, 0.15) calc(50% - 0.03125rem), rgba(0, 0, 0, 0.15) calc(50% + 0.03125rem), transparent calc(50% + 0.03125rem));
+  background-repeat: no-repeat;
+  background-size: 100% 75%;
+  background-position: center center;
+}
+
+.offers__content-info-level, .offers__content-info-duration {
+  flex: 1 1 50%;
+  color: #26464d;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.offers__content-info-duration-text {
+  padding-left: 0.25rem;
+}
+
 /*# sourceMappingURL=main.css.map */
