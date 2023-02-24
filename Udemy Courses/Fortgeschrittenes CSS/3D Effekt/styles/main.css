@@ -9,6 +9,7 @@ html {
 }
 
 .card {
+  position: relative;
   padding: 4rem 3rem;
   margin: 2rem auto;
   height: 10rem;
@@ -17,7 +18,33 @@ html {
   box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.5);
   color: black;
   text-align: center;
-  background: linear-gradient(30deg, #3ff0a6, #49e023);
 
-  transform: rotateX(45deg);
+  transition: transform 1s ease-in-out;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.card__front {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(45deg, green, yellow);
+  backface-visibility: hidden;
+}
+
+.card__back {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(45deg, red, orange);
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
 }
