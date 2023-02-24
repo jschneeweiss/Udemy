@@ -8,10 +8,16 @@ html {
   font-family: "Lato", sans-serif;
 }
 
+.card__container {
+  perspective: 800px;
+  margin: 0 auto;
+  width: 15rem;
+}
+
 .card {
   position: relative;
   padding: 4rem 3rem;
-  margin: 2rem auto;
+  margin: 2rem 0;
   height: 10rem;
   width: 15rem;
   border-radius: 0.5rem;
@@ -24,7 +30,7 @@ html {
   transform: rotateY(0deg);
 }
 
-.card:hover {
+.card__container:hover .card {
   transform: rotateY(180deg);
 }
 
