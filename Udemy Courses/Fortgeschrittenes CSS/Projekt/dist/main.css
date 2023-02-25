@@ -895,6 +895,20 @@ html {
   opacity: 1;
 }
 
+.offers__card-container--3d {
+  perspective: 50rem;
+}
+.offers__card-container--3d .offers__card-hover {
+  display: none;
+}
+.offers__card-container--3d .offers__card {
+  transition: transform 0.5s ease-in-out;
+  transform: rotateX(calc((var(--mouse-y, 0.5) - 0.5) * -20deg)) rotateY(calc((var(--mouse-x, 0.5) - 0.5) * 20deg));
+}
+.offers__card-container--3d:hover .offers__card {
+  transition: transform 0.1s linear;
+}
+
 .offers__card-container--3d-hover .offers__card-primary {
   transform-style: preserve-3d;
 }
