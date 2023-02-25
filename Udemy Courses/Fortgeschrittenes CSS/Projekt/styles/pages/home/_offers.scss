@@ -248,6 +248,17 @@ $-half-pixel-width: 1rem / 32;
 
 // hover entfernen, Karte nur von vorne
 .offers__card-container--3d {
+  perspective: 50rem;
+
+  .offers__card {
+    transition: transform 0.5s ease-in-out;
+    transform: rotateY(calc(calc(var(--mouse-x, 0.5) - 0.5) * 20deg))
+      rotateX(calc(calc(var(--mouse-y, 0.5) - 0.5) * -20deg));
+    transform-style: preserve-3d;
+  }
+  .offers__card-container--3d:hover .offers__card {
+    transition: transform 0s linear;
+  }
 }
 
 // hover bleibt aber der Button kommt 3D mäßig raus. Transparenz versuchen, Vorderseite sollte leicht zu erkennen sein
@@ -255,5 +266,21 @@ $-half-pixel-width: 1rem / 32;
   // wegen firefox
   .offers__card-primary {
     transform-style: preserve-3d;
+  }
+
+  perspective: 50rem;
+
+  .offers__card {
+    transition: transform 0.5s ease-in-out;
+    transform: rotateY(calc(calc(var(--mouse-x, 0.5) - 0.5) * 20deg))
+      rotateX(calc(calc(var(--mouse-y, 0.5) - 0.5) * -20deg));
+    transform-style: preserve-3d;
+  }
+  .offers__card-container--3d-hover:hover .offers__card {
+    transition: transform 0s linear;
+  }
+
+  .button {
+    transform: translateZ(50px);
   }
 }
