@@ -875,4 +875,24 @@ html {
   opacity: 1;
 }
 
+.offers__card-container--flip {
+  perspective: 50rem;
+}
+.offers__card-container--flip .offers__card {
+  transition: transform 1s ease-in-out;
+  transform-style: preserve-3d;
+}
+.offers__card-container--flip:hover .offers__card {
+  transform: rotateY(180deg);
+}
+.offers__card-container--flip .offers__card-primary {
+  backface-visibility: hidden;
+  transform: rotateY(0deg);
+}
+.offers__card-container--flip .offers__card-hover {
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  opacity: 1;
+}
+
 /*# sourceMappingURL=main.css.map */
