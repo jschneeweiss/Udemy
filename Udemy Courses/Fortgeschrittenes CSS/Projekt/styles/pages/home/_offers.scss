@@ -245,3 +245,15 @@ $-half-pixel-width: 1rem / 32;
     opacity: 1;
   }
 }
+
+// hover entfernen, Karte nur von vorne
+.offers__card-container--3d {
+}
+
+// hover bleibt aber der Button kommt 3D mäßig raus. Transparenz versuchen, Vorderseite sollte leicht zu erkennen sein
+.offers__card-container--3d-hover {
+  // wegen firefox
+  .offers__card-primary {
+    transform-style: preserve-3d;
+  }
+}

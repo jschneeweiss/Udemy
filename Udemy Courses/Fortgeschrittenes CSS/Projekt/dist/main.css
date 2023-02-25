@@ -895,4 +895,8 @@ html {
   opacity: 1;
 }
 
+.offers__card-container--3d-hover .offers__card-primary {
+  transform-style: preserve-3d;
+}
+
 /*# sourceMappingURL=main.css.map */
