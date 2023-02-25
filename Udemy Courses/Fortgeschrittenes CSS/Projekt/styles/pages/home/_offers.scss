@@ -22,19 +22,11 @@ $-half-pixel-width: 1rem / 32;
   margin-top: ($-offer-card-margin * -2);
 }
 
-.offers__card {
+.offers__card-container {
   $-width: (100% / 3);
 
   width: calc(#{$-width} - #{($-offer-card-margin * 2 + 0.001rem)});
   margin: ($-offer-card-margin * 2) $-offer-card-margin 0 $-offer-card-margin;
-  padding: 0 0 2rem 0;
-  background-color: white;
-  box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.5);
-  border-left: $-offers-card-border-width solid $-offers-card-border-color;
-  border-right: $-offers-card-border-width solid $-offers-card-border-color;
-  border-top: $-offers-card-border-width solid $-offers-card-border-color;
-
-  position: relative;
 
   @media (max-width: $breakpoint-md) {
     $-width-md: (100% / 2);
@@ -46,7 +38,20 @@ $-half-pixel-width: 1rem / 32;
   }
 }
 
-.offers__card::after {
+.offers__card {
+  box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.offers__card-primary {
+  padding: 0 0 2rem 0;
+  background-color: white;
+  border-left: $-offers-card-border-width solid $-offers-card-border-color;
+  border-right: $-offers-card-border-width solid $-offers-card-border-color;
+  border-top: $-offers-card-border-width solid $-offers-card-border-color;
+}
+
+.offers__card-primary::after {
   content: "";
   display: block;
   position: absolute;
@@ -213,6 +218,30 @@ $-half-pixel-width: 1rem / 32;
   transition: opacity 0.25s ease-in-out;
 
   .offers__card:hover & {
+    opacity: 1;
+  }
+}
+
+.offers__card-container--flip {
+  perspective: 50rem;
+
+  .offers__card {
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+  }
+
+  &:hover .offers__card {
+    transform: rotateY(180deg);
+  }
+
+  .offers__card-primary {
+    backface-visibility: hidden;
+    transform: rotateY(0deg);
+  }
+
+  .offers__card-hover {
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
     opacity: 1;
   }
 }
