@@ -1,7 +1,7 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -10,27 +10,35 @@ body {
 }
 
 .container {
-    margin: 1rem;
-    display: grid;
-    grid-template-columns: [start] 100px [middle] auto [end];
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: [start] 100px [middle] 1fr [end];
+  column-gap: 1rem;
+  row-gap: 1rem;
+  justify-items: stretch;
+  align-items: stretch;
 }
 
 .card {
-    border: 0.25rem solid rgb(100, 100, 100);
-    border-radius: 1rem;
-    padding: 0.5rem 1rem;
+  border: 0.25rem solid rgb(100, 100, 100);
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .card--a {
-    grid-column-start: start;
-    grid-column-end: end;
+  grid-column-start: start;
+  grid-column-end: end;
+}
+
+.card--c {
+  min-height: 15rem;
 }
 
 .card--d {
-    grid-column-start: start;
-    grid-column-end: span 2;
+  grid-column-start: start;
+  grid-column-end: span 2;
 }
 
 .card__heading {
-    text-align: center;
+  text-align: center;
 }
