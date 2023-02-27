@@ -1,0 +1,36 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  --color-heading: blue;
+}
+
+.container {
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: [start] 100px [middle] auto [end];
+}
+
+.card {
+    border: 0.25rem solid rgb(100, 100, 100);
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.card--a {
+    grid-column-start: start;
+    grid-column-end: end;
+}
+
+.card--d {
+    grid-column-start: start;
+    grid-column-end: span 2;
+}
+
+.card__heading {
+    text-align: center;
+}
