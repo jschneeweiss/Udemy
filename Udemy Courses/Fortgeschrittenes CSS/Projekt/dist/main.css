@@ -261,6 +261,7 @@ html {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1.25rem;
+  cursor: pointer;
 }
 .button:hover {
   color: #1cffb9;
@@ -927,6 +928,10 @@ html {
   filter: blur(0.5rem);
 }
 
+.gallery {
+  padding-bottom: 3rem;
+}
+
 .gallery__container {
   max-width: 75rem;
   margin: 0px auto;
@@ -981,11 +986,34 @@ html {
   }
 }
 
+.gallery__cb-toggle:not(:checked) ~ .gallery__list--cb-toggle {
+  display: none;
+}
+
+.gallery__cb-toggle {
+  display: none;
+}
+
+.gallery__more-button-container {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  text-align: center;
+}
+.gallery__cb-toggle:checked ~ .gallery__more-button-container {
+  display: none;
+}
+
 .gallery__list-item {
   display: block;
 }
 .gallery__list-item--first {
   grid-column-start: 1;
+  grid-column-end: span 2;
+  grid-row-start: 1;
+  grid-row-end: span 2;
+}
+.gallery__list-item--last {
+  grid-column-start: 4;
   grid-column-end: span 2;
   grid-row-start: 1;
   grid-row-end: span 2;
@@ -996,21 +1024,6 @@ html {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-input[type=checkbox] {
-  width: 200px;
-  height: 200px;
-  appearance: none;
-  background-color: red;
-}
-
-input[type=checkbox]:checked {
-  background-color: green;
-}
-
-input[type=checkbox]:checked ~ * {
-  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */
