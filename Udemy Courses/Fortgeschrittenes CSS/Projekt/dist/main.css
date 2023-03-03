@@ -999,18 +999,28 @@ html {
 }
 
 input[type=checkbox] {
-  width: 200px;
-  height: 200px;
   appearance: none;
-  background-color: red;
-}
-
-input[type=checkbox]:checked {
-  background-color: green;
 }
 
 input[type=checkbox]:checked ~ * {
   display: none;
+}
+
+.gallery__checkbox {
+  position: relative;
+  margin: 2rem 0 2rem 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.gallery__checkbox-label {
+  position: absolute;
+  z-index: 1;
+  color: rgb(0, 226, 156);
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 2.4rem 0;
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=main.css.map */

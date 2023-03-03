@@ -61,17 +61,34 @@
 }
 
 input[type="checkbox"] {
-  width: 200px;
-  height: 200px;
+  //   width: 100px;
+  //   height: 100px;
   appearance: none;
-  background-color: red;
+  //   background-color: red;
 }
 
 input[type="checkbox"]:checked {
-  background-color: green;
+  //   background-color: green;
 }
 
 input[type="checkbox"]:checked ~ * {
   // ~ * alle Elemente die danach kommen; ~ div alle div's
   display: none;
+}
+
+.gallery__checkbox {
+  position: relative;
+  margin: 2rem 0 2rem 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.gallery__checkbox-label {
+  position: absolute;
+  z-index: 1;
+  color: $color-primary;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 2.4rem 0;
+  text-transform: uppercase;
 }
