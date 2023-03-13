@@ -77,7 +77,52 @@
 }
 
 .gallery__list-item {
+  $animation-duration: 0.1s;
   display: block;
+
+  position: relative;
+  filter: contrast(1.1) brightness(1.15) saturate(1.1);
+  transform: scale(1);
+  z-index: 0;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0);
+  transition: filter $animation-duration ease-in-out,
+    box-shadow $animation-duration ease-in-out,
+    transform $animation-duration ease-in-out,
+    z-index $animation-duration linear;
+
+  &::before {
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 1);
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity $animation-duration ease-in-out;
+
+    background: radial-gradient(
+      circle closest-corner,
+      transparent 0,
+      rgba(175, 105, 24, 0.4) 100%
+    );
+    content: "";
+    mix-blend-mode: multiply;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    z-index: 20;
+    transition: filter $animation-duration ease-in-out,
+      transform $animation-duration ease-in-out,
+      box-shadow $animation-duration ease-in-out, z-index 0s linear;
+
+    filter: contrast(1) brightness(1) saturate(1);
+    &::before {
+      opacity: 0;
+    }
+  }
 
   &--first {
     grid-column-start: 1;

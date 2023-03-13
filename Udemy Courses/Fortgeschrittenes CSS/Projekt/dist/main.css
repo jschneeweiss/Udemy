@@ -1016,6 +1016,36 @@ html {
 
 .gallery__list-item {
   display: block;
+  position: relative;
+  filter: contrast(1.1) brightness(1.15) saturate(1.1);
+  transform: scale(1);
+  z-index: 0;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0);
+  transition: filter 0.1s ease-in-out, box-shadow 0.1s ease-in-out, transform 0.1s ease-in-out, z-index 0.1s linear;
+}
+.gallery__list-item::before {
+  box-shadow: 0 0 1rem rgb(0, 0, 0);
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 0.1s ease-in-out;
+  background: radial-gradient(circle closest-corner, transparent 0, rgba(175, 105, 24, 0.4) 100%);
+  content: "";
+  mix-blend-mode: multiply;
+}
+.gallery__list-item:hover {
+  transform: scale(1.1);
+  z-index: 20;
+  transition: filter 0.1s ease-in-out, transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out, z-index 0s linear;
+  filter: contrast(1) brightness(1) saturate(1);
+}
+.gallery__list-item:hover::before {
+  opacity: 0;
 }
 .gallery__list-item--first {
   grid-column-start: 1;
