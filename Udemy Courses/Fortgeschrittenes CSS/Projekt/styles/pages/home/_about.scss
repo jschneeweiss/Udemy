@@ -8,16 +8,33 @@
 }
 
 .about__img {
-  $-img-size: 30rem;
+  $-img-size: 32rem;
 
   width: $-img-size;
   height: $-img-size;
   object-fit: cover;
   float: left;
 
-  border-radius: $-img-size / 2;
+  border-radius: 10000px;
   shape-outside: circle(50% at 50% 50%);
   margin-right: 2rem;
+
+  @media (max-width: $breakpoint-lg) {
+    width: $-img-size * 0.9;
+    height: $-img-size * 0.9;
+  }
+  @media (max-width: $breakpoint-md) {
+    width: $-img-size * 0.8;
+    height: $-img-size * 0.8;
+  }
+  @media (max-width: $breakpoint-sm) {
+    width: $-img-size * 0.4;
+    height: $-img-size * 0.4;
+  }
+  @media (max-width: $breakpoint-xs) {
+    width: $-img-size * 0.3;
+    height: $-img-size * 0.3;
+  }
 }
 
 .about__heading {
@@ -31,7 +48,7 @@
 }
 
 .about__text {
-  padding-top: 2rem;
+  padding-top: 2.5rem;
   color: white;
 
   &:before {
@@ -42,6 +59,10 @@
     margin-left: 1rem;
     background-color: $color-primary;
   }
+
+  @media (max-width: $breakpoint-lg) {
+    padding-top: 0.5rem;
+  }
 }
 
 .about__paragraph {
@@ -50,6 +71,8 @@
 }
 
 .about__quote {
+  font-style: italic;
+
   &:before {
     content: "„";
   }
