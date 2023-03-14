@@ -26,9 +26,12 @@
   font-weight: 500;
   letter-spacing: 0.1em;
   font-size: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .about__text {
+  padding-top: 2rem;
   color: white;
 
   &:before {
@@ -38,5 +41,19 @@
     width: 4rem;
     margin-left: 1rem;
     background-color: $color-primary;
+  }
+}
+
+.about__paragraph {
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.about__quote {
+  &:before {
+    content: "„";
+  }
+  &:after {
+    content: '"';
   }
 }

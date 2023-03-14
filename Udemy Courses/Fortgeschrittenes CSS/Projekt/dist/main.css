@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /** 1200px oder schmaler **/
 /** 768px oder schmaler **/
 /** 992px oder schmaler **/
@@ -1104,9 +1105,12 @@ html {
   font-weight: 500;
   letter-spacing: 0.1em;
   font-size: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .about__text {
+  padding-top: 2rem;
   color: white;
 }
 .about__text:before {
@@ -1116,6 +1120,18 @@ html {
   width: 4rem;
   margin-left: 1rem;
   background-color: rgb(0, 226, 156);
+}
+
+.about__paragraph {
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.about__quote:before {
+  content: "„";
+}
+.about__quote:after {
+  content: '"';
 }
 
 /*# sourceMappingURL=main.css.map */
