@@ -1082,4 +1082,22 @@ html {
   background-position: center center;
 }
 
+.about {
+  background-color: #011820;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.about__img {
+  width: 30rem;
+  height: 30rem;
+  object-fit: cover;
+  border-radius: 15rem;
+  float: left;
+}
+
+.about__text {
+  color: white;
+}
+
 /*# sourceMappingURL=main.css.map */
