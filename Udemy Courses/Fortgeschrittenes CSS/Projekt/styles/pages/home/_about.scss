@@ -7,6 +7,10 @@
   padding-bottom: 3rem;
 }
 
+.about__slideshow {
+  position: relative;
+}
+
 .about__img {
   $-img-size: 32rem;
 
@@ -35,6 +39,12 @@
     width: $-img-size * 0.3;
     height: $-img-size * 0.3;
   }
+}
+
+.about__img--slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .about__heading {

@@ -1089,6 +1089,10 @@ html {
   padding-bottom: 3rem;
 }
 
+.about__slideshow {
+  position: relative;
+}
+
 .about__img {
   width: 32rem;
   height: 32rem;
@@ -1121,6 +1125,12 @@ html {
     width: 9.6rem;
     height: 9.6rem;
   }
+}
+
+.about__img--slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .about__heading {
