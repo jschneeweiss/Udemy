@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /** 1200px oder schmaler **/
 /** 768px oder schmaler **/
 /** 992px oder schmaler **/
@@ -1080,6 +1081,156 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+}
+
+.about {
+  background-color: #011820;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.about__slideshow {
+  position: relative;
+}
+
+.about__img {
+  width: 32rem;
+  height: 32rem;
+  object-fit: cover;
+  float: left;
+  border-radius: 10000px;
+  shape-outside: circle(50% at 50% 50%);
+  margin-right: 2rem;
+}
+@media (max-width: 75em) {
+  .about__img {
+    width: 28.8rem;
+    height: 28.8rem;
+  }
+}
+@media (max-width: 62em) {
+  .about__img {
+    width: 25.6rem;
+    height: 25.6rem;
+  }
+}
+@media (max-width: 48em) {
+  .about__img {
+    width: 12.8rem;
+    height: 12.8rem;
+  }
+}
+@media (max-width: 36em) {
+  .about__img {
+    width: 9.6rem;
+    height: 9.6rem;
+  }
+}
+
+.about__img--slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.about__img--slideshow-1 {
+  animation: animation-about__img--slideshow-1 10s ease-in-out infinite;
+}
+
+@keyframes animation-about__img--slideshow-1 {
+  0% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.about__img--slideshow-2 {
+  animation: animation-about__img--slideshow-2 10s ease-in-out infinite;
+}
+
+@keyframes animation-about__img--slideshow-2 {
+  0% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.about__img--slideshow-3 {
+  animation: animation-about__img--slideshow-3 10s ease-in-out infinite;
+}
+
+@keyframes animation-about__img--slideshow-3 {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.about__heading {
+  color: rgb(0, 226, 156);
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  font-size: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.about__text {
+  padding-top: 2.5rem;
+  color: white;
+}
+.about__text:before {
+  content: "";
+  display: inline-block;
+  height: 0.25rem;
+  width: 4rem;
+  margin-left: 1rem;
+  background-color: rgb(0, 226, 156);
+}
+@media (max-width: 75em) {
+  .about__text {
+    padding-top: 0.5rem;
+  }
+}
+
+.about__paragraph {
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.about__quote {
+  font-style: italic;
+}
+.about__quote:before {
+  content: "„";
+}
+.about__quote:after {
+  content: '"';
 }
 
 /*# sourceMappingURL=main.css.map */
