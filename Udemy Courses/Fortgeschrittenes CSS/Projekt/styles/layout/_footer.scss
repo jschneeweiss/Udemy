@@ -1,2 +1,30 @@
 @use "../abstracts/" as *;
 @use "sass:color";
+
+.footer {
+  background-color: $color-secondary-light;
+  padding: 3rem 0;
+}
+
+.footer__container {
+  @include make-container();
+
+  display: flex;
+  flex-direction: row;
+}
+
+.footer__text-column {
+  flex: 0 0 50%;
+}
+
+.footer__logo-column {
+  flex: 0 0 50%;
+}
+
+.footer__heading {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1.1em;
+}

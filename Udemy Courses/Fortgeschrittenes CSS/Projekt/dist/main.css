@@ -244,6 +244,45 @@ html {
   fill: currentColor;
 }
 
+.footer {
+  background-color: #407682;
+  padding: 3rem 0;
+}
+
+.footer__container {
+  max-width: 75rem;
+  margin: 0px auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: row;
+}
+.footer__container::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+@media (max-width: 36em) {
+  .footer__container {
+    padding: 0 1rem;
+  }
+}
+
+.footer__text-column {
+  flex: 0 0 50%;
+}
+
+.footer__logo-column {
+  flex: 0 0 50%;
+}
+
+.footer__heading {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1.1em;
+}
+
 .icon {
   fill: currentColor;
   height: 1em;
