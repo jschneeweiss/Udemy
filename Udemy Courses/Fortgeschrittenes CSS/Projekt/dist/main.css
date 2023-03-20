@@ -255,6 +255,7 @@ html {
   padding: 0 2rem;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 .footer__container::after {
   display: block;
@@ -268,18 +269,23 @@ html {
 }
 
 .footer__text-column {
-  flex: 0 0 50%;
+  flex: 0 0 auto;
+  margin-right: 5rem;
 }
 
 .footer__logo-column {
-  flex: 0 0 50%;
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer__heading {
   color: white;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 3.3rem;
+  max-width: 24rem;
   line-height: 1.1em;
 }
 
@@ -344,10 +350,32 @@ html {
   transform: translate(100%, 0);
 }
 
+.footer__logo-container {
+  font-size: 18em;
+  padding: 0.05em;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(135deg, rgb(0, 226, 156) 0%, #26464d 100%);
+  border-radius: 1000px;
+}
+
+.footer__logo-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.1em;
+  border: 0.025em solid white;
+  border-radius: 1000px;
+}
+
 .icon {
   fill: currentColor;
   height: 1em;
   vertical-align: middle;
+}
+.icon:not(.icon--no-position) {
   position: relative;
   top: -0.075em;
 }
