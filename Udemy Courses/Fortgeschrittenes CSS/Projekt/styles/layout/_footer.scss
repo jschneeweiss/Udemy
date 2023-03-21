@@ -3,15 +3,19 @@
 
 .footer {
   background-color: $color-secondary-light;
-  padding: 3rem 0;
+  padding: 3rem 0 0.5rem 0;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .footer__container {
-  @include make-container();
-
   display: flex;
   flex-direction: row;
   justify-content: center;
+  padding-bottom: 2rem;
+  border-bottom: 0.175rem solid rgba(255, 255, 255, 0.2);
 
   @media (max-width: $breakpoint-sm) {
     flex-direction: column;
@@ -157,3 +161,30 @@
 }
 
 // em ist abhängig von der Schriftgröße
+
+.footer__footer {
+}
+
+.footer__footer-list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer__footer-link {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  padding: 0.5rem 1.5rem;
+  white-space: nowrap;
+  transition: color 0.25s ease-in-out;
+
+  &:hover {
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    padding: 0.5rem 0.5rem;
+  }
+}
