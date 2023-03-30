@@ -2,6 +2,7 @@
 @use "sass:color";
 
 $-form__input-padding: 0.75rem 1rem;
+$-form__input-border: 0.125rem;
 
 .form__group {
   position: relative;
@@ -10,10 +11,16 @@ $-form__input-padding: 0.75rem 1rem;
 
 .form__input {
   background-color: transparent;
-  border: 0.125rem solid $color-primary;
+  border: $-form__input-border solid $color-primary;
   padding: $-form__input-padding;
+  color: $color-primary;
   border-radius: 1000px;
   width: 12.5rem;
+  font-family: inherit;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .form__label {
