@@ -28,7 +28,7 @@ $-booking-modal-height: 25rem;
   width: $-booking-modal-width;
   height: $-booking-modal-height;
 
-  padding-left: $-booking-modal-width * 0.4;
+  padding-left: $-booking-modal-width * 0.375;
 
   $modal-content-bg: color.scale($color-secondary-light, $alpha: -15%);
 
