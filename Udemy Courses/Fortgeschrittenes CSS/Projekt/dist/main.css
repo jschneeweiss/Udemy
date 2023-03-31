@@ -498,8 +498,15 @@ select {
   top: 0;
   left: 0;
   font-size: 1rem;
-  padding: 0.75rem 1rem;
+  margin: 0.75rem 1rem;
   color: rgb(0, 226, 156);
+  transform-origin: 0% 50%;
+  transform: scale(1) translate(0, 0);
+  will-change: transform;
+  transition: transform 0.25s ease-in-out;
+}
+.form__input:focus ~ .form__label {
+  transform: scale(0.75) translate(0.4rem, 2.7rem);
 }
 
 .motivation {
