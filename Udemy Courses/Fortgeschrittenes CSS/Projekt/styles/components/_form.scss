@@ -94,13 +94,18 @@ $-form__input-border: 0.125rem;
     border: 0.175em solid white;
     border-radius: 1000px;
     margin-right: 0.5em;
-  }
-
-  .form__radio-item-radio:checked ~ .form__radio-item-label::before {
     background-image: radial-gradient(
       circle at center center,
       white 49%,
       transparent 50%
     );
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 0 0;
+    transition: background-size 0.2s ease-in-out;
+  }
+
+  .form__radio-item-radio:checked ~ .form__radio-item-label::before {
+    background-size: 100% 100%;
   }
 }
